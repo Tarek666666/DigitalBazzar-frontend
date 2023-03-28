@@ -13,7 +13,7 @@ function ReSendEmail() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        fetch("user/resend", {
+        fetch("https://digital-bazzar-backend.herokuapp.com/user/resend", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

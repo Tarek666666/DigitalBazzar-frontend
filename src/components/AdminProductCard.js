@@ -9,7 +9,7 @@ function AdminProductCard({product}) {
       //when admins delete a product from shop ---------------------------------------- >>
       function handleDeleteProduct(id){
 
-              fetch('/admin/dashboard/deleteproduct', {
+              fetch('https://digital-bazzar-backend.herokuapp.com/admin/dashboard/deleteproduct', {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json'
@@ -28,7 +28,7 @@ function AdminProductCard({product}) {
           //when admins update a product ---------------------------------------- >>
           function handleEditProduct(id){
 
-            fetch(`/admin/dashboard/editproduct/${id}` , {method:'GET'})
+            fetch(`https://digital-bazzar-backend.herokuapp.com/admin/dashboard/editproduct/${id}` , {method:'GET'})
             .then(res => res.json())
             .then(data =>{
                 navigate('/dashboard/editproduct' , {state:{product:data}})

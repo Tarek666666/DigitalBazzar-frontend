@@ -20,7 +20,7 @@ function OrdersPage() {
     async function fetchOrders() {
         setLoading(true);
         try {
-            const fetchOrders = await axios.get("/admin/dashboard/orders");
+            const fetchOrders = await axios.get("https://digital-bazzar-backend.herokuapp.com/admin/dashboard/orders");
             setLoading(false);
             setError(false);
             //only if there is order in db

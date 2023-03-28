@@ -12,7 +12,7 @@ function VerifyEmail() {
     const verifyEmail = async () =>{
         try {
             
-            const url = `http://localhost:3000/user/${param.id}/verify/${param.token}`
+            const url = `https://digital-bazzar-backend.herokuapp.com/user/${param.id}/verify/${param.token}`
             const {data} = await axios.get(url)
             setValid(true)
         } catch (error) {

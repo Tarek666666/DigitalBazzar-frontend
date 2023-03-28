@@ -10,7 +10,7 @@ function AdminProducts() {
    async function getProducts(){
         dispatch({type:'FETCH_PRODUCTS_REQUEST'})
         try {
-           const {data} = await axios.get('/products/allproducts');
+           const {data} = await axios.get('https://digital-bazzar-backend.herokuapp.com/products/allproducts');
            dispatch({type:'FETCH_PRODUCTS_SUCCESS' , payload:data})
         } catch (error) {
            
@@ -18,7 +18,7 @@ function AdminProducts() {
     }
 
     async  function checkIsAdmin(){
-      const {data} = await axios.get('/admin/dashboard');
+      const {data} = await axios.get('https://digital-bazzar-backend.herokuapp.com/admin/dashboard');
 
       if(data.isAuth){
           console.log('you can see admin dashboard')

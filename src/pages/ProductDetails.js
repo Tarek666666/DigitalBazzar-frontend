@@ -19,7 +19,7 @@ useEffect(() => {
    
     setLoading(true)
     try {
-      const data = await axios.get(`/products/productdetails/${id}`);
+      const data = await axios.get(`https://digital-bazzar-backend.herokuapp.com/products/productdetails/${id}`);
       setProduct(data.data)
       setLoading(false)
 

@@ -54,7 +54,7 @@ function Signup() {
       setErrorMessage('Phone number field should contain only numbers!')
     }
     else{
-      fetch('/user/signup', {
+      fetch('https://digital-bazzar-backend.herokuapp.com/user/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

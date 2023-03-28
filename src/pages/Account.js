@@ -17,7 +17,7 @@ function Account({ loggedUser }) {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        fetch("/user/signin", {
+        fetch("https://digital-bazzar-backend.herokuapp.com/user/signin", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

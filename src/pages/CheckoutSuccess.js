@@ -6,7 +6,7 @@ function CheckoutSuccess() {
     const [items] = useContext(CartContext);
 
     useEffect(() => {
-        fetch("/user/clearcart")
+        fetch("https://digital-bazzar-backend.herokuapp.com/user/clearcart")
             .then((res) => res.json())
             .then((data) => {})
             .catch((err) => console.log(err));
