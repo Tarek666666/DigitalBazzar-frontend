@@ -38,7 +38,7 @@ function App() {
 
   useEffect(() => {
     async function fetchData() {
-     const {data} = await axios.get('/auth');
+     const {data} = await axios.get('https://digital-bazzar-backend.herokuapp.com/auth');
      setLoggedUser(data)
     }
     fetchData();

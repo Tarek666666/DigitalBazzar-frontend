@@ -13,7 +13,7 @@ async function bringProdsFirstTime(){
 
      try {
 
-        const {data} = await axios.get('/products/allproducts');
+        const {data} = await axios.get('https://digital-bazzar-backend.herokuapp.com/products/allproducts');
         dispatch({type:'FETCH_PRODUCTS_SUCCESS' , payload:data})
         
      } catch (error) {

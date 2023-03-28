@@ -11,7 +11,7 @@ export function CartProvider({ children }) {
     );
   // this code handels to cases, if the user is loggedin , the crud operation for shopping cart will be saved in db, otherwise inLocalstorage    
     const addToCart = (item) => {
-        fetch("/user/addtocart", {
+        fetch("https://digital-bazzar-backend.herokuapp.com/user/addtocart", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -60,7 +60,7 @@ export function CartProvider({ children }) {
             });
     };
     const increaseFromCart = (id, price) => {
-        fetch("/user/increaseitem", {
+        fetch("https://digital-bazzar-backend.herokuapp.com/user/increaseitem", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -94,7 +94,7 @@ export function CartProvider({ children }) {
             });
     };
     const decreaseFromCart = (id, price) => {
-        fetch("/user/decreaseitem", {
+        fetch("https://digital-bazzar-backend.herokuapp.com/user/decreaseitem", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -128,7 +128,7 @@ export function CartProvider({ children }) {
     };
 
     const deleteFromCart = (id, price) => {
-        fetch("/user/deletefromcart", {
+        fetch("https://digital-bazzar-backend.herokuapp.com/user/deletefromcart", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -160,7 +160,7 @@ export function CartProvider({ children }) {
     useEffect(() => {
         //   setTotal(items.reduce((acc, item) => acc + (item.price * item.qty), 0))
 
-        fetch("/user/getcart")
+        fetch("https://digital-bazzar-backend.herokuapp.com/user/getcart")
             .then((res) => res.json())
             .then((fetchedCart) => {
                 if (fetchedCart.items) {
