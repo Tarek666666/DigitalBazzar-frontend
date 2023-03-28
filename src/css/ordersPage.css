@@ -1,0 +1,34 @@
+
+
+.order-table {
+    border-collapse: collapse;
+    width: 70% !important;
+    margin: 35px auto;
+    min-height: 300px;
+    
+    
+  }
+  
+  .order-table th, .order-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    
+  }
+  
+  .order-table th {
+    background-color: #1da6e4;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .order-table tr:hover {
+    background-color: aliceblue
+  }
+  
+  .order-table div {
+    margin-bottom: 5px;
+    font-size: 14px;
+  }

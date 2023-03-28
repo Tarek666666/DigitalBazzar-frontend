@@ -1,0 +1,586 @@
+* {
+
+  font-family: 'Rubik', sans-serif;
+  
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  
+  
+}
+
+:root{
+  --color-main-blue : #137cd0; 
+  --color-light-blue : #1da6e4;  
+  --color-main-yellow :  #ffe70f;
+   
+}
+body{
+ background-color: #161B40 ;
+}
+
+a {
+  text-decoration: none;
+ background-color: transparent;
+  color: white;
+}
+.home-icon{
+  color: white;
+  transition: all linear .3s;
+}
+
+.top-nav-container{
+
+  margin: auto;
+  
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.top-nav-container-dark {
+  margin: auto;
+  
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  
+}
+.dark{
+ background-color: rebeccapurple !important;
+}
+
+/* Start : =>  Toppest Header design */
+.top-nav-container div{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-main-blue);
+  border-left: 1px var( --color-light-blue) solid;
+  border-right: 1px var( --color-light-blue) solid;
+}
+.top-nav-container p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ margin: auto;
+ padding: 10px 2px;
+ font-weight: 500;
+ gap: 3px;
+}
+.top-nav-container a:hover{
+
+  text-decoration: underline;
+}
+
+.header-topest{
+  border-bottom: 1px var( --color-light-blue) solid;
+  background-color: var(--color-main-blue);
+}
+/* End : =>  Toppest Header design */
+
+/* Start : =>  Switch theme button design */
+.form-switch{
+
+  margin: 0px !important;
+  border: none;
+  padding: 0;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center;
+  min-width: 120px !important;
+ 
+}
+.switch-btn-container{
+  
+  border: none !important;
+  width: 100% !important;
+}
+.switch-btn-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.switch-btn-container svg{
+  left: 40px !important;
+}
+
+.switch-btn-container input{
+  background-color: #434343 ;
+  
+}
+.switch-btn-container input:checked{
+  background-color: var(--color-light-blue) !important;
+  
+}
+
+.switch-btn{
+  width: 65px !important;
+  height: 30px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: relative;
+  cursor: pointer;
+
+}
+
+.sun-icon {
+  position: absolute;
+  left: 27%;
+  background-color: transparent !important;
+  color: var(--color-main-yellow)
+}
+.switch-btn-container .moon-icon{
+  position: absolute;
+  left: 56%;
+  background-color: transparent !important;
+  color: #43BEE5;
+}
+/* End : =>  Switch theme button design */
+
+/* Start : => second nav design */
+
+.search-container{
+
+  align-self: center;
+  width: 70% !important;
+  height: 60px !important;
+}
+
+.input-group{
+
+  height: 55px;
+  
+}
+.seconed-header a{
+
+ 
+  margin: auto;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-check{
+ 
+}
+.form-control{
+
+  border-radius: 0px 0px !important;
+}
+.btn-outline-secondary{
+  border-radius: 0px 0px !important;
+  background-color: white;
+}
+
+.logo{
+
+  width: 150px;
+  height: 50px;
+  
+}
+.seconed-header{
+  background-color: var(--color-main-blue);
+}
+.seconed-header div{
+  display: flex;
+  justify-content: center;
+}
+
+.second-nav-container {
+
+  display: flex !important;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  height: 160px;
+  
+}
+
+.logo-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10px;
+  width: 15% !important;
+}
+.logo-text{
+
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+}
+
+.logo-extra-text{
+
+  color: var(--color-main-yellow);
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+}
+
+.dark .search-btn{
+
+  background-color: #D59208 !important;
+}
+.dark .search-btn:hover{
+
+  background-color: #F40058!important;
+}
+
+.search-btn{
+
+  background-color: var(--color-light-blue) !important;
+  border-radius: 0px 0px !important;
+  border: none !important;
+  transition: all linear .3s !important;
+}
+.search-btn:hover{
+  background-color: var(--color-main-yellow) !important;
+ 
+}
+
+.search-btn-icon{
+  background-color:transparent;
+ 
+}
+
+/* End : =>  second nav design */
+
+/* Start : => Menu nav design */
+
+.menu-header {
+
+  background-color: var(--color-light-blue);
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-header-dark{
+  background-color: var(--color-light-blue);
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-header .container-xxl{
+
+  
+  height: 100%;
+  display: flex;
+  align-items: center;
+ 
+}
+.menu-header-container{
+  height: 100% !important;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.dropdown:hover>.dropdown-menu {
+  display: flex;
+  flex-direction: column;
+}
+.dropdown:hover>.photo-lab-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 25px;
+}
+
+.dropdown-menu{
+ border-radius: 0px 0px !important;
+}
+
+
+.dropdown>.dropdown-toggle:active {
+  /*Without this, clicking will make it sticky*/
+    pointer-events: none;
+}
+
+.dropdown button {
+
+  background-color: transparent;
+  height: 100%;
+  border: none;
+  border-radius: 0px 0px;
+  font-size: 16px;
+ 
+}
+.dropdown{
+  background-color: var(--color-light-blue);
+  
+}
+
+.menu-buttons-container{
+  background-color: var(--color-light-blue);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 80% !important;
+  width: 83% !important;
+}
+.dropdown-menu{
+  border-radius: 0px 0px;
+  width: 100%;
+}
+.dropdown-menu li {
+  background-color: white;
+  border-radius: 0px 0px;
+}
+
+.img-in-navbar{
+  width: 180px;
+  height: 90px;
+}
+
+.photo-lab-menu{
+  width: 1300px;
+  position: absolute;
+  top: 39px;
+  left: 50%;
+  transform: translateX(-20%);
+}
+
+.photo-lab-menu li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  margin: 25px 25px;
+  
+}
+
+.brands-buttons button {
+  width: 95%;
+  border: 1px solid black;
+  cursor: pointer;
+  background-color: transparent;
+  transition: all .3s linear;
+}
+.brands-buttons button:hover{
+  background-color: var(--color-main-yellow);
+}
+.dropdown:hover>.brands-buttons {
+  
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  height: 50vh;
+  gap: 5px;
+}
+
+.brands-buttons button{
+  background-repeat:no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+
+.samsung-btn{
+  background-image: url('../../public/images/brands-logo/samsung.png');
+}
+.lg-btn{
+  background-image: url('../../public/images/brands-logo/lg.png');
+}
+.sony-btn{
+  background-image: url('../../public/images/brands-logo/sony.png');
+}
+.asus-btn{
+  background-image: url('../../public/images/brands-logo/asus.png');
+}
+.huw-btn{
+  background-image: url('../../public/images/brands-logo/huw.png');
+}
+.hp-btn{
+  background-image: url('../../public/images/brands-logo/hp.png');
+}
+
+.cart-btn-container{
+  background-color: var(--color-light-blue);
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.shopping-cart-btn{
+  display: flex;
+  align-items: center;
+  
+  cursor: pointer;
+  border: none;
+  align-self: flex-end;
+  gap: 5px;
+  
+}
+
+.shopping-cart-btn button{
+  border: none;
+  background-color: var(--color-light-blue);
+  
+}
+.badge{
+  background-color: var(--color-main-yellow);
+  color: white;
+  font-size: 15px;
+  border-radius: 50% 50% !important;
+}
+.cart-text{
+  color: white;
+  font-weight: bold;
+  background-color: var(--color-light-blue);
+}
+.cart-icons{
+  background-color: transparent;
+  color: white;
+}
+
+
+.cart-dropdown{
+ width: 360px;
+ position: absolute;
+ right: 0;
+ display: none;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center ;
+ gap: 3px;
+ 
+}
+.cart-container li {
+  display: flex;
+  justify-content: center;
+  align-items: center ;
+  width: 94%;
+}
+.total-cart{
+  height: 45px;
+  width: 95%;
+  background-color: var(--color-main-blue);
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.item-container-cart{
+  display: flex;
+  justify-content: flex-start!important;
+  background-color: aliceblue;
+  gap: 10px;
+}
+.item-container-cart img {
+  width: 40%;
+  height: 80px;
+}
+.item-info-container{
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 60%;
+  
+}
+.item-info-container span {
+  background-color: transparent;
+}
+.view-cart-btn{
+  height: 45px !important;
+  width: 94% !important;
+  background-color: var(--color-light-blue) !important;
+  color: white !important;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  margin-bottom:  4px;
+  transition: all linear 0.3s !important;
+  
+}
+.view-cart-btn a{
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+.view-cart-btn:hover{
+  background-color: var(--color-main-blue) !important;
+}
+.view-cart-btn:hover > a{
+
+  color: white !important;
+}
+.item-cart-title{
+  font-weight: bold;
+}
+
+.verf-container{
+
+  width: 80%;
+  height: 50vh;
+  margin: auto;
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.verf-container .link-verf{
+  color: white;
+  font-weight: bold;
+  border-radius: 5px 5px;
+  width: 130px;
+  height: 30px;
+  background-color: var(--color-light-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.verf-container a{
+  color: white;
+  font-weight: bold;
+  border-radius: 5px 5px;
+  width: 130px;
+  height: 30px;
+  background-color: var(--color-light-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.notfound-container{
+
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+  align-items: center;
+  background-color: aliceblue;
+
+}
+.notfound-container .not-found-link{
+
+  color: var(--color-main-blue);
+  font-weight: bold;
+}

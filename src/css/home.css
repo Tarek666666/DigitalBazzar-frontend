@@ -1,0 +1,332 @@
+
+.hero-section{
+
+    width: 100%;
+    height: 350px;
+    
+}
+
+.hero-section img {
+
+    height: 350px;
+    width: 100%;
+}
+.samsung{
+    background-image: url('../../public/images/hero/samsung.png');
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 350px;
+}
+.msi-dragon{
+    background-image: url('../../public/images/hero/msi-dragon.png');
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 350px;
+}
+.asus{
+    background-image: url('../../public/images/hero/asus.png');
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 350px;
+    background-color: black;
+}
+.iphone{
+    background-image: url('../../public/images/hero/iphone.png');
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 350px;
+    
+}
+
+
+/* Special Collection section design */
+
+.super-collection-container{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        border-radius: 15px 15px;
+        
+}
+.row-container{
+
+    height: 400px;
+}
+
+.left-section-container{
+
+    
+    width: 50%;
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 15px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    
+    
+}
+.left-section-container h1{
+    color: var(--color-main-yellow);
+}
+.buy-now-btn{
+    background-color: var(--color-main-blue);
+    color: white;
+    border-radius: 20px 20px;
+    padding: 8px;
+    width: 140px;
+    font-weight: bold;
+    height: 4   0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    font-size: 21px;
+    transition: all .3s linear;
+}
+.buy-now-btn:hover{
+    background-color: var(--color-main-yellow);
+}
+
+.right-section-container{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 10px 10px;
+    gap: 15px;
+}
+.right-section-container div {
+
+   
+    width: 48%;
+    height: 190px;
+    border-radius: 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+   
+}
+.right-section-container img {
+    float: right;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-main-blue);
+    border-radius: 10px 10px;
+}
+.diff-color{
+    background-color: var(--color-light-blue) !important;
+}
+.special-section-carousel{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px 15px;
+    
+}
+.special-section-carousel img {
+    border-radius: 15px 15px;
+ height: 400px;
+}
+.carousel-control-next-icon{
+ 
+   filter: none !important;
+}
+.carousel-control-prev-icon{
+ 
+    filter: none !important;
+ }
+.carousel-indicators button{
+    filter: none !important;
+    background-color: white !important;
+}
+.carousel-caption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+     filter: none;
+}
+.carousel-caption h5{
+
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+}
+.carousel-caption p{
+    color: white;
+}
+.old-price{
+    text-decoration: line-through;
+    color: red;
+    font-weight: bold;
+}
+.new-price{
+    text-decoration: underline;
+   
+    font-weight: bold;
+}
+
+
+/*End of Hero section design -------------------------------------------*/
+
+/*Start of Short-cut design-------------------------------------------*/
+
+.short-cuts-container{
+    width: 100%;
+    height: 210px;
+    background-color: var(--color-light-blue)  ;
+}
+.icons-container{
+    justify-content: center;
+}
+.icons-container div{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-width: 20%;
+}
+.icons-container div p {
+    text-align: center;
+    max-width: 70%;
+}
+
+.quick-links-container{
+    
+    height: 240px;
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    width: 90%;
+    margin: auto;
+    
+}
+.products-container{
+    width: 65%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    
+}
+.single-product-container{
+    height: 70%;
+    min-width: 25%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border:  1px solid rgba(95, 95, 95, 0.185);
+    background-color: aliceblue;
+}
+.single-info-container{
+    width: 60%;
+   
+    
+}
+.single-photo-container{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    
+    
+}
+.single-photo-container img{
+    height: 80%;
+    width: 100%;
+    
+    
+}
+
+.single-info-container h5{
+    margin: 0px;
+    font-weight: bold;
+    font-size: 16px;
+}
+.single-info-container p {
+    margin: 0;
+    color: gray;
+}
+.single-info-container a {
+    color: black;
+}
+.single-info-container a:hover{
+    text-decoration: underline;
+    
+}
+
+/* Start of Featured collection design */
+
+.featured-collection-conitaner{
+
+   background-color: aliceblue;
+  
+}
+.single-featured-container{
+
+    height: 350px;
+    border: 1px solid rgba(95, 95, 95, 0.185);
+    border-radius: 5px 5px 5px 5px;
+    margin-bottom: 18px;
+    
+    
+    
+}
+.single-featured-container img{
+
+    height: 60%;
+    width: 100%;
+    border-radius: 5px 5px 5px 5px;
+    
+    
+}
+
+
+/* Marquee Section design */
+
+.marquee-items-container {
+
+    width: 80%;
+    height: 110px;
+    margin: auto;
+    margin-bottom: 50px;
+    background-color: aliceblue;
+    
+    
+}
+.marq{
+    width: 100% !important;
+    
+    display: flex;
+    justify-content: space-evenly;
+    gap: 25px;
+
+}
+.marquee-items-container img{
+    height: 80px;
+    width: 130px;
+  
+}
+.marquee{
+    min-width: none !important;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-evenly;
+}

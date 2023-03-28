@@ -1,0 +1,71 @@
+
+.loging-form{
+
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 11px;    
+    
+    
+}
+
+.loging-form div {
+
+    width: 80%;
+}
+.loging-form input {
+
+    margin-top: 5px;
+}
+.loging-form a{
+    text-decoration: underline;
+}
+.loging-form a:hover{
+    text-decoration: none;
+    
+}
+.loging-form button{
+
+    width: 50% !important;
+    background-color: #1da6e4; 
+    border: none !important;
+}
+.loging-form button:hover{
+    background-color: #137cd0; 
+    
+}
+.respons-state-msg-success{
+
+    background-color: rgba(171, 248, 54, 0.911);
+    color: black;
+    font-weight: bold;
+    width: 80%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.respons-state-msg-fail{
+
+    background-color: rgba(228, 56, 56, 0.76);
+    color: black;
+    font-weight: bold;
+    width: 80%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.respons-state-msg-success{
+
+    background-color: rgba(76, 228, 56, 0.76);
+    color: black;
+    font-weight: bold;
+    width: 80%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
