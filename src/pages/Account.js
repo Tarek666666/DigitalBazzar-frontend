@@ -63,7 +63,7 @@ function Account({ loggedUser }) {
             .then((data) => {
                 document.cookie = 'token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;'
                 document.cookie = 'loggedIn=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;'
-                window.location.href = "./";
+                window.location.href = "./signin";
             })
             .catch((err) => {
                 console.log(err);
