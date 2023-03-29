@@ -37,12 +37,25 @@ function App() {
   const [loggedUser , setLoggedUser] = useState()
 
   useEffect(() => {
-    async function fetchData() {
+    fetch('https://digital-bazzar-backend.herokuapp.com/auth', { credentials: 'include' })
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      setLoggedUser(data)
+    })
+    .catch(console.log);
+
+
+
+
+   /* async function fetchData() {
      const {data} = await axios.get('https://digital-bazzar-backend.herokuapp.com/auth');
      console.log(data , 'from app to auth / ')
      setLoggedUser(data)
     }
-    fetchData();
+    fetchData();/* */
+    
   }, []); 
   return (
     <ProductsProvider >
