@@ -50,7 +50,7 @@ function Account({ loggedUser }) {
     const handleLogout = (event) => {
         event.preventDefault();
         fetch("/user/signout", {
-            credentials: "includes",
+            credentials: "include",
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
