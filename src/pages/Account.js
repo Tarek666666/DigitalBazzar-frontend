@@ -49,7 +49,7 @@ function Account({ loggedUser }) {
 
     const handleLogout = (event) => {
         event.preventDefault();
-        fetch("/user/signout", {
+        fetch("https://digital-bazzar-backend.herokuapp.com/user/signout", {
             credentials: "include",
             method: "POST",
             headers: {
@@ -63,7 +63,7 @@ function Account({ loggedUser }) {
             .then((data) => {
                 document.cookie = 'token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;'
                 document.cookie = 'loggedIn=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;'
-            //    window.location.href = "./";
+               window.location.href = "./";
             })
             .catch((err) => {
                 console.log(err);
