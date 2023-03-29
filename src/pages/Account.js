@@ -19,9 +19,11 @@ function Account({ loggedUser }) {
         event.preventDefault();
         fetch("https://digital-bazzar-backend.herokuapp.com/user/signin", {
             method: "POST",
+            credentials: true ,
             headers: {
                 "Content-Type": "application/json",
             },
+            
             body: JSON.stringify({ password, email }),
         })
             .then((res) => {
