@@ -61,7 +61,8 @@ function Account({ loggedUser }) {
                 return res;
             })
             .then((data) => {
-                console.log(data.ok);
+                document.cookie = 'token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;'
+                document.cookie = 'loggedIn=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;'
                 window.location.href = "./";
             })
             .catch((err) => {
