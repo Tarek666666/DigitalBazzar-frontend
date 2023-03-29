@@ -35,6 +35,7 @@ function Account({ loggedUser }) {
                 } else {
                     setError(true);
                     setErrorMessage(data.msg);
+                   
                 }
 
                 //handle error
