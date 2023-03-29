@@ -13,6 +13,7 @@ export function CartProvider({ children }) {
     const addToCart = (item) => {
         fetch("https://digital-bazzar-backend.herokuapp.com/user/addtocart", {
             method: "POST",
+            credentials: 'include',
             headers: {
                 "Content-Type": "application/json",
             },
