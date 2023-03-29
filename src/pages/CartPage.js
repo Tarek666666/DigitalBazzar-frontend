@@ -27,6 +27,7 @@ function CartPage({ loggedUser }) {
         //only if shopping carts has at least one items
         if (items.length > 0) {
             fetch("https://digital-bazzar-backend.herokuapp.com/create-checkout-session", {
+                credentials: 'include',
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
