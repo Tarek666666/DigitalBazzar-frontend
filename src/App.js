@@ -42,6 +42,8 @@ function App() {
       return res.json();
     })
     .then((data) => {
+
+      console.log('from fetch with credinteals' , data)
       setLoggedUser(data)
     })
     .catch(console.log);
@@ -55,7 +57,7 @@ function App() {
      setLoggedUser(data)
     }
     fetchData();/* */
-    
+
   }, []); 
   return (
     <ProductsProvider >
