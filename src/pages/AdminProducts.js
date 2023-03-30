@@ -25,23 +25,35 @@ function AdminProducts() {
         }
     }
 
- /**   async  function checkIsAdmin(){
-      const {data} = await axios.get('https://digital-bazzar-backend.herokuapp.com/admin/dashboard' , {
+    async  function checkIsAdmin(){
 
-              credentials: "include",
-              method: "GET"
+      fetch("https://digital-bazzar-backend.herokuapp.com/admin/dashboard", {
+        credentials: "include",
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*"
+        },
+    })
+        .then((res) => {
+     
+            return res.json();
+        })
+        .then((data) => {
+                if(data.isAuth){
+                    //case user is existed and the role is admin
+                    console.log('you can see admin dashboard')
+                }else{
+                   //case role is not admin or no user ==> redirect to signin page
+                  window.location.href = '/signin'
+                }
+        })
+        .catch((err) => {
+            console.log(err);
         });
-
-      if(data.isAuth){
-          console.log('you can see admin dashboard')
-      }else{
-         // window.location.href = '/signin'
-         console.log('didnt work')
-      }
-    } */
     
     useEffect(()=>{
-      //  checkIsAdmin()
+        checkIsAdmin()
         getProducts()
 
     },[])
