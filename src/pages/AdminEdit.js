@@ -16,8 +16,6 @@ function AdminEdit() {
     const [errorMessage , setErrorMessage] = useState('')
     const [error , setError] = useState(false)
 
-    
-    
   
     const handleNameChange = (e) => {
       setName(e.target.value);
@@ -78,8 +76,6 @@ function AdminEdit() {
         })
         .catch(err =>console.log(err))
       }
-      
-
     }
     useEffect(()=>{
       setTimeout(() => {

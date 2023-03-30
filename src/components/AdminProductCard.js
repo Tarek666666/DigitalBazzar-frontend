@@ -11,7 +11,7 @@ function AdminProductCard({product}) {
 
               fetch('https://digital-bazzar-backend.herokuapp.com/admin/dashboard/deleteproduct', {
                 credentials: "include",
-                method: "GET",
+                method: "POST",
                 headers: {
                   'Content-Type': 'application/json',
                   "Access-Control-Allow-Origin": "*"
