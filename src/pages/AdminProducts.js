@@ -10,8 +10,7 @@ function AdminProducts() {
    async function getProducts(){
         dispatch({type:'FETCH_PRODUCTS_REQUEST'})
         try {
-           const {data} = await axios.get('https://digital-bazzar-backend.herokuapp.com/products/allproducts' ,{ credentials: "include",
-           method: "GET"});
+           const {data} = await axios.get('https://digital-bazzar-backend.herokuapp.com/products/allproducts');
            dispatch({type:'FETCH_PRODUCTS_SUCCESS' , payload:data})
         } catch (error) {
            
@@ -22,13 +21,14 @@ function AdminProducts() {
       const {data} = await axios.get('https://digital-bazzar-backend.herokuapp.com/admin/dashboard' , {
 
               credentials: "include",
-              method: "GET",
+              method: "GET"
         });
 
       if(data.isAuth){
           console.log('you can see admin dashboard')
       }else{
-          window.location.href = '/signin'
+         // window.location.href = '/signin'
+         console.log('didnt work')
       }
     }
     
