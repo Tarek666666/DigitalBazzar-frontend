@@ -9,7 +9,8 @@ function OrdersPage() {
     const [errorMessage, setErrorMessage] = useState();
 
     async function checkIsAdmin() {
-        const { data } = await axios.get("/admin/dashboard");
+        const { data } = await axios.get("/admin/dashboard" ,{ credentials: "include",
+        method: "GET"});
         if (data.isAuth) {
             console.log("you can see admin dashboard");
         } else {
@@ -21,7 +22,7 @@ function OrdersPage() {
         setLoading(true);
         try {
             const fetchOrders = await axios.get("https://digital-bazzar-backend.herokuapp.com/admin/dashboard/orders" ,{ credentials: "include",
-            method: "GET",});
+            method: "GET"});
             setLoading(false);
             setError(false);
             //only if there is order in db
