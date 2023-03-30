@@ -82,10 +82,12 @@ function AdminAddNewProduct() {
       }
       else{
             setLoading(true)
-            fetch('/admin/dashboard/addnewproduct' , {
-              method: 'POST',
+            fetch('https://digital-bazzar-backend.herokuapp.com/admin/dashboard/addnewproduct' , {
+              credentials: "include",
+              method: "POST",
               headers: {
-                'Content-Type': 'application/json'
+                  "Content-Type": "application/json",
+                  "Access-Control-Allow-Origin": "*"
               },
               body: JSON.stringify( {name , price , image , description , featured , brand , category} )
             })
