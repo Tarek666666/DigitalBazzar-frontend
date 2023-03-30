@@ -43,10 +43,10 @@ function App() {
       return res.json();
     })
     .then((data) => {
-      if(data.cart.length > 0){
+      
         console.log('from fetch with credinteals' , data)
         setLoggedUser(data)
-      }
+     
       
     })
     .catch(console.log);
