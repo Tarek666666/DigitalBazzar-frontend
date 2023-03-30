@@ -44,7 +44,7 @@ function AdminProducts() {
                     //case user is existed and the role is admin
                     console.log('you can see admin dashboard')
                 }else{
-                   //case role is not admin or no user ==> redirect to signin page
+                   //case role is not admin or no user ==> redirect to signin pagee
                   window.location.href = '/signin'
                 }
         })
