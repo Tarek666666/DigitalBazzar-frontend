@@ -162,8 +162,8 @@ export function CartProvider({ children }) {
         //   setTotal(items.reduce((acc, item) => acc + (item.price * item.qty), 0))
 
         fetch("https://digital-bazzar-backend.herokuapp.com/user/getcart", {
-            method: "POST",
             credentials: "include",
+            method: "GET",
         })
             .then((res) => res.json())
             .then((fetchedCart) => {
