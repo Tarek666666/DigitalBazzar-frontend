@@ -57,6 +57,7 @@ function AdminProducts() {
         getProducts()
 
     },[])
+  }
     
   return (
     <div className='container-xxl d-flex edit-prods-container  mt-5 mb-5'>
