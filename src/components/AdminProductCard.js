@@ -10,10 +10,11 @@ function AdminProductCard({product}) {
       function handleDeleteProduct(id){
 
               fetch('https://digital-bazzar-backend.herokuapp.com/admin/dashboard/deleteproduct', {
-                method: 'POST',
-                credentials: 'include',
+                credentials: "include",
+                method: "GET",
                 headers: {
-                  'Content-Type': 'application/json'
+                  'Content-Type': 'application/json',
+                  "Access-Control-Allow-Origin": "*"
                 },
                 body: JSON.stringify({ id })
               })
@@ -29,7 +30,14 @@ function AdminProductCard({product}) {
           //when admins update a product ---------------------------------------- >>
           function handleEditProduct(id){
 
-            fetch(`https://digital-bazzar-backend.herokuapp.com/admin/dashboard/editproduct/${id}` , {method:'GET'})
+            fetch(`https://digital-bazzar-backend.herokuapp.com/admin/dashboard/editproduct/${id}` , {
+              credentials: "include",
+              method: "GET",
+              headers: {
+                'Content-Type': 'application/json',
+                "Access-Control-Allow-Origin": "*"
+              }
+            })
             .then(res => res.json())
             .then(data =>{
                 navigate('/dashboard/editproduct' , {state:{product:data}})
