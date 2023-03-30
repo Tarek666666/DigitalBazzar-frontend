@@ -15,20 +15,32 @@ function AdminDashBoard() {
     const [theme , isDarkMode, setTheme] = useContext(ThemeContext)
 
     async  function checkIsAdmin(){
-        const {data} = await axios.get('https://digital-bazzar-backend.herokuapp.com/admin/dashboard' , {
-           
+
+      fetch("https://digital-bazzar-backend.herokuapp.com/admin/dashboard", {
         credentials: "include",
         method: "GET",
-          });
+        headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*"
+        },
+    })
+        .then((res) => {
+        //    console.log(res);
+            return res.json();
+        })
+        .then((data) => {
+                if(data.isAuth){
+                    console.log('you can see admin dashboard')
+                }else{
+                //   window.location.href = '/signin'
+                console.log('didnt work')
+                }
+        })
+        .catch((err) => {
+            console.log(err);
+        });
 
-          console.log(data)
 
-        if(data.isAuth){
-            console.log('you can see admin dashboard')
-        }else{
-         //   window.location.href = '/signin'
-         console.log('didnt work')
-        }
       }
                                              
     useEffect(()=>{

@@ -53,9 +53,6 @@ function App() {
     })
     .catch(err => console.log(err));
 
-
-
-
    /* async function fetchData() {
      const {data} = await axios.get('https://digital-bazzar-backend.herokuapp.com/auth');
      console.log(data , 'from app to auth / ')
