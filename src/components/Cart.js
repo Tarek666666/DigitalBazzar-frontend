@@ -9,15 +9,16 @@ function Cart({ isDarkMode, loggedUser }) {
     const [items, localCart ,total] = useContext(CartContext);
     const [itemsTest , setItemsTest] = useState([])
 
-    if(loggedUser){
-
-        setItemsTest(loggedUser.cart)
-        console.log(loggedUser , loggedUser.cart , '=====> from cart page')
-    }
+  
 
     useEffect(() => {
        
+        if(loggedUser){
 
+            setItemsTest(loggedUser.cart)
+            console.log(loggedUser , loggedUser.cart , '=====> from cart page')
+            console.log(itemsTest , 'aaaaaaaa')
+        }
         console.log(itemsTest , 'aaaaaaaa')
     }, []);
 
