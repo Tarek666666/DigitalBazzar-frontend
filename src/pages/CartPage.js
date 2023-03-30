@@ -28,7 +28,7 @@ function CartPage({ loggedUser }) {
         if (items.length > 0) {
             fetch("https://digital-bazzar-backend.herokuapp.com/create-checkout-session", {
                 method: "POST",
-                credentials: "include",
+                
                 mode: 'no-cors',
                 headers: {
                     "Content-Type": "application/json",
