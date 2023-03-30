@@ -43,11 +43,12 @@ function App() {
       return res.json();
     })
     .then((data) => {
-     
-          console.log(data , 'the data')
-        
-       
-     
+      
+
+      if(data.cart){
+        setLoggedUser(data)
+        console.log(data , 'the data')
+      }
       
     })
     .catch(err => console.log(err));
@@ -58,7 +59,7 @@ function App() {
    /* async function fetchData() {
      const {data} = await axios.get('https://digital-bazzar-backend.herokuapp.com/auth');
      console.log(data , 'from app to auth / ')
-     setLoggedUser(data)
+    
     }
     fetchData();/* */
 
