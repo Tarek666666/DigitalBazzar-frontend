@@ -64,8 +64,7 @@ function Account({ loggedUser }) {
             .then((data) => {
 
                 console.log(data , 'cookies should be deleted ')
-                document.cookie = 'token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; httpOnly=true; secure=true; sameSite=none;';
-                document.cookie = 'loggedIn=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; httpOnly=true; secure=true; sameSite=none;';
+              
              //  window.location.href = "./";
             })
             .catch((err) => {
