@@ -64,7 +64,7 @@ function Account({ loggedUser }) {
             .then((data) => {
 
                 console.log(data , 'cookies should be deleted ')
-              
+                localStorage.removeItem("token");
              //  window.location.href = "./";
             })
             .catch((err) => {
