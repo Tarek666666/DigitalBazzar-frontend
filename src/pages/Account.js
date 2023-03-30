@@ -33,7 +33,7 @@ function Account({ loggedUser }) {
                 if (data.success) {
                     window.localStorage.setItem("token", data.token);
                     console.log(data);
-                  //  window.location.href = "./";
+                   window.location.href = "./";
                 } else {
                     setError(true);
                     setErrorMessage(data.msg);
@@ -62,7 +62,7 @@ function Account({ loggedUser }) {
             })
             .then((data) => {
 
-                console.log(data , 'from logout')
+                console.log(data , 'cookies should be deleted ')
               //  document.cookie = 'token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;'
               //  document.cookie = 'loggedIn=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;'
              //  window.location.href = "./";
