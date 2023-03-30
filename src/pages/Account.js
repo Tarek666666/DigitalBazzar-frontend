@@ -65,9 +65,9 @@ function Account({ loggedUser }) {
 
                 console.log(data , 'cookies should be deleted ')
                 localStorage.removeItem("token");
-               // document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-              //  document.cookie = "loggedIn=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-             //  window.location.href = "./";
+              //  document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+              // document.cookie = "loggedIn=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+             window.location.href = "./";
             })
             .catch((err) => {
                 console.log(err);
