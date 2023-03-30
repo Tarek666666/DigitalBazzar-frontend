@@ -9,7 +9,7 @@ function Account({ loggedUser }) {
     const [errorMessage, setErrorMessage] = useState("");
 
     const handleEmailChange = (e) => {
-        setEmail(e.target.value);
+        setEmail(e.target.value.toLowerCase().trim());
     };
     const handlePasswordChange = (e) => {
         setPassword(e.target.value);
@@ -23,8 +23,7 @@ function Account({ loggedUser }) {
             headers: {
                 "Content-Type": "application/json",
             },
-            
-            body: JSON.stringify({ password, email }),
+            body: JSON.stringify({ password, email}),
         })
             .then((res) => {
                 return res.json();

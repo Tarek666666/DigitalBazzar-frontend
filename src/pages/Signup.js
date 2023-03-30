@@ -16,7 +16,7 @@ function Signup() {
     const navigate = useNavigate();
   
     const handleEmailChange = (e)=>{
-      setEmail(e.target.value)
+      setEmail(e.target.value.toLowerCase().trim())
     }
     const handlePasswordChange = (e)=>{
       setPassword(e.target.value)
@@ -25,7 +25,7 @@ function Signup() {
         setRePassword(e.target.value)
     }
     const handleUserNameChange = (e)=>{
-        setusername(e.target.value)
+        setusername(e.target.value.toLowerCase().trim())
     }
     const handlePhoneChange = (e)=>{
         setPhone(e.target.value)
