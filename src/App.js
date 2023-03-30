@@ -37,14 +37,17 @@ function App() {
   const [loggedUser , setLoggedUser] = useState()
 
   useEffect(() => {
-    fetch('https://digital-bazzar-backend.herokuapp.com/auth', { credentials: 'include' })
+    fetch('https://digital-bazzar-backend.herokuapp.com/auth', { credentials: "include",
+    method: "GET", })
     .then((res) => {
       return res.json();
     })
     .then((data) => {
-
-      console.log('from fetch with credinteals' , data)
-      setLoggedUser(data)
+      if(data){
+        console.log('from fetch with credinteals' , data)
+        setLoggedUser(data)
+      }
+      
     })
     .catch(console.log);
 
