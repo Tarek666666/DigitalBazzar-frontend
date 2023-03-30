@@ -9,11 +9,11 @@ export function CartProvider({ children }) {
     const [localCart, setLocalCart] = useState(
         localStorage.getItem("items") ? JSON.parse(localStorage.getItem("items")) : []
     );
-  // this code handels to cases, if the user is loggedin , the crud operation for shopping cart will be saved in db, otherwise inLocalstorage    
+    // this code handels to cases, if the user is loggedin , the crud operation for shopping cart will be saved in db, otherwise inLocalstorage
     const addToCart = (item) => {
         fetch("https://digital-bazzar-backend.herokuapp.com/user/addtocart", {
             method: "POST",
-            credentials: 'include',
+            credentials: "include",
             headers: {
                 "Content-Type": "application/json",
             },
@@ -161,7 +161,10 @@ export function CartProvider({ children }) {
     useEffect(() => {
         //   setTotal(items.reduce((acc, item) => acc + (item.price * item.qty), 0))
 
-        fetch("https://digital-bazzar-backend.herokuapp.com/user/getcart")
+        fetch("https://digital-bazzar-backend.herokuapp.com/user/getcart", {
+            method: "POST",
+            credentials: "include",
+        })
             .then((res) => res.json())
             .then((fetchedCart) => {
                 if (fetchedCart.items) {

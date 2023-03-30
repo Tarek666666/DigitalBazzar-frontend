@@ -7,19 +7,19 @@ import { Link } from "react-router-dom";
 
 function Cart({ isDarkMode, loggedUser }) {
     const [items, localCart ,total] = useContext(CartContext);
-    const [itemsTest , setItemsTest] = useState([])
+   // const [itemsTest , setItemsTest] = useState([])
 
   
 
     useEffect(() => {
        
-        if(loggedUser){
+      /*  if(loggedUser){
 
             setItemsTest(loggedUser.cart)
             console.log(loggedUser , loggedUser.cart , '=====> from cart page')
             console.log(itemsTest , 'aaaaaaaa')
         }
-        console.log(itemsTest , 'aaaaaaaa')
+        console.log(itemsTest , 'aaaaaaaa') */
     }, []);
 
     return (
