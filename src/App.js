@@ -43,8 +43,8 @@ function App() {
       return res.json();
     })
     .then((data) => {
-        if(data.length > 0){
-          console.log('from fetch with credinteals' , data.success !== false)
+        if(data){
+          console.log('from fetch with credinteals' , data)
           setLoggedUser(data)
         }else{
 
