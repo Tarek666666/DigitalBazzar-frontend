@@ -10,7 +10,8 @@ function MembersPage() {
 
     // check if users is not admin , redirect user to signin page --------------------------->
     async function checkIsAdmin() {
-        const { data } = await axios.get("https://digital-bazzar-backend.herokuapp.com/admin/dashboard");
+        const { data } = await axios.get("https://digital-bazzar-backend.herokuapp.com/admin/dashboard" , { credentials: "include",
+        method: "GET"});
         if (data.isAuth) {
             console.log("you can see admin dashboard");
         } else {

@@ -17,7 +17,11 @@ function AdminAddNewProduct() {
     const [error , setError] = useState(false)
 
     async  function checkIsAdmin(){
-      const {data} = await axios.get('https://digital-bazzar-backend.herokuapp.com/admin/dashboard');
+      const {data} = await axios.get('https://digital-bazzar-backend.herokuapp.com/admin/dashboard' , {
+           
+      credentials: "include",
+      method: "GET",
+        });
 
       if(data.isAuth){
           console.log('you can see admin dashboard')

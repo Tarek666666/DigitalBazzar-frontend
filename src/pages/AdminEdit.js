@@ -55,7 +55,8 @@ function AdminEdit() {
         setErrorMessage('Product Name, Image Url , Description , Brand , Catagory can not be empty')
       }else{
         fetch(`https://digital-bazzar-backend.herokuapp.com/admin/dashboard/editproduct/${location.state.product._id}` , {
-          method: 'POST',
+          credentials: "include",
+          method: "POST",
           headers: {
             'Content-Type': 'application/json'
           },
