@@ -9,7 +9,7 @@ function MembersPage() {
     const [errorMessage, setErrorMessage] = useState();
 
     // check if users is not admin , redirect user to signin page --------------------------->
-    async function checkIsAdmin() {
+ /*   async function checkIsAdmin() {
         fetch("https://digital-bazzar-backend.herokuapp.com/admin/dashboard", {
             credentials: "include",
             method: "GET",
@@ -34,7 +34,7 @@ function MembersPage() {
             .catch((err) => {
                 console.log(err);
             });
-    }
+    }/** */
     async function fetchMembers() {
         setLoading(true);
         try {
@@ -54,7 +54,7 @@ function MembersPage() {
     }
 
     useEffect(() => {
-        checkIsAdmin();
+      //  checkIsAdmin();
         fetchMembers();
     }, []);
     return (
