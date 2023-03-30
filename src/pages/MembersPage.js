@@ -12,7 +12,7 @@ function MembersPage() {
     async function fetchMembers() {
         setLoading(true);
         try {
-            const fetchMembers = await axios.get("https://digital-bazzar-backend.herokuapp.com/admin/dashboard/members" ,{ credentials: "include",
+            const fetchMembers = await axios("https://digital-bazzar-backend.herokuapp.com/admin/dashboard/members" ,{ credentials: "include",
             method: "POST"});
 
             console.log(fetchMembers.data.membersInDb);
