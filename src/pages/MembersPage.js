@@ -8,33 +8,7 @@ function MembersPage() {
     const [error, setError] = useState(false);
     const [errorMessage, setErrorMessage] = useState();
 
-    // check if users is not admin , redirect user to signin page --------------------------->
- /*   async function checkIsAdmin() {
-        fetch("https://digital-bazzar-backend.herokuapp.com/admin/dashboard", {
-            credentials: "include",
-            method: "GET",
-            headers: {
-                "Content-Type": "application/json",
-                "Access-Control-Allow-Origin": "*"
-            },
-        })
-            .then((res) => {
-         
-                return res.json();
-            })
-            .then((data) => {
-                    if(data.isAuth){
-                        //case user is existed and the role is admin
-                        console.log('you can see admin dashboard')
-                    }else{
-                       //case role is not admin or no user ==> redirect to signin page
-                      window.location.href = '/signin'
-                    }
-            })
-            .catch((err) => {
-                console.log(err);
-            });
-    }/** */
+
     async function fetchMembers() {
         setLoading(true);
         try {
