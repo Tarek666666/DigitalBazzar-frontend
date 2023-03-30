@@ -26,7 +26,6 @@ function AdminProducts() {
     }
 
     async  function checkIsAdmin(){
-
       fetch("https://digital-bazzar-backend.herokuapp.com/admin/dashboard", {
         credentials: "include",
         method: "GET",
@@ -44,20 +43,20 @@ function AdminProducts() {
                     //case user is existed and the role is admin
                     console.log('you can see admin dashboard')
                 }else{
-                   //case role is not admin or no user ==> redirect to signin pagee
+                   //case role is not admin or no user ==> redirect to signin page
                   window.location.href = '/signin'
                 }
         })
         .catch((err) => {
             console.log(err);
         });
+    }
     
     useEffect(()=>{
-        checkIsAdmin()
+       checkIsAdmin()
         getProducts()
 
     },[])
-  }
     
   return (
     <div className='container-xxl d-flex edit-prods-container  mt-5 mb-5'>
