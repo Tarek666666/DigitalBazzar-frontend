@@ -29,13 +29,16 @@ function CartPage({ loggedUser }) {
             fetch("https://digital-bazzar-backend.herokuapp.com/create-checkout-session", {
                 method: "POST",
                 credentials: "include",
-                mode: 'no-cors',
                 headers: {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({ items, total, userId: loggedUser._id }),
             })
-                .then((res) => res.json())
+                .then((res) => {
+
+                    console.log('here converting the ' , res , '<===== json')
+                    return res.json()
+                })
                 .then((data) => {
                     // case product was succesfully added
                     if (data.url) {
