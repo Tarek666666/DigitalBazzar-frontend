@@ -8,6 +8,8 @@ import { Link } from "react-router-dom";
 function Cart({ isDarkMode, loggedUser }) {
     const [items, localCart ,total] = useContext(CartContext);
 
+    console.log(loggedUser , loggedUser.cart , '=====> from cart page')
+
     return (
         <div
             class={
