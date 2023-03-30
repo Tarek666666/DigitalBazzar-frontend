@@ -38,7 +38,7 @@ function App() {
 
   useEffect(() => {
     fetch('https://digital-bazzar-backend.herokuapp.com/auth', { credentials: "include",
-    method: "GET", })
+    method: "GET" })
     .then((res) => {
       return res.json();
     })
