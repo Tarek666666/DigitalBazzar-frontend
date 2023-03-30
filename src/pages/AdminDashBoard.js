@@ -15,7 +15,10 @@ function AdminDashBoard() {
     const [theme , isDarkMode, setTheme] = useContext(ThemeContext)
 
     async  function checkIsAdmin(){
-        const {data} = await axios.get('https://digital-bazzar-backend.herokuapp.com/admin/dashboard');
+        const {data} = await axios.get('https://digital-bazzar-backend.herokuapp.com/admin/dashboard' , {
+            
+            credentials: 'include'
+          });
 
         if(data.isAuth){
             console.log('you can see admin dashboard')
