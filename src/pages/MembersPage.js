@@ -13,7 +13,7 @@ function MembersPage() {
         setLoading(true);
         try {
             const fetchMembers = await axios.get("https://digital-bazzar-backend.herokuapp.com/admin/dashboard/members" ,{ credentials: "include",
-            method: "GET"});
+            method: "POST"});
 
             console.log(fetchMembers.data.membersInDb);
             setLoading(false);

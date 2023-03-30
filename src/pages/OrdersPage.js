@@ -12,7 +12,7 @@ function OrdersPage() {
         setLoading(true);
         try {
             const fetchOrders = await axios.get("https://digital-bazzar-backend.herokuapp.com/admin/dashboard/orders" ,{ credentials: "include",
-            method: "GET" ,
+            method: "POST" ,
             headers: {
                 "Content-Type": "application/json",
                 "Access-Control-Allow-Origin": "*"
