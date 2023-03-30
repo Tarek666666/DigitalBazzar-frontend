@@ -16,11 +16,15 @@ function AdminAddNewProduct() {
     const [errorMessage , setErrorMessage] = useState('')
     const [error , setError] = useState(false)
 
-  /*  async  function checkIsAdmin(){
+    async  function checkIsAdmin(){
       const {data} = await axios.get('https://digital-bazzar-backend.herokuapp.com/admin/dashboard' , {
            
       credentials: "include",
       method: "GET",
+       headers: {
+                'Content-Type': 'application/json',
+                "Access-Control-Allow-Origin": "*"
+              }
         });
 
       if(data.isAuth){
@@ -29,7 +33,7 @@ function AdminAddNewProduct() {
           window.location.href = '/signin'
       }
     }
-    */
+    
   
     const handleNameChange = (e) => {
       setName(e.target.value);
@@ -100,7 +104,7 @@ function AdminAddNewProduct() {
     
 
     useEffect(() => {
-   //   checkIsAdmin()
+      checkIsAdmin()
       setTimeout(() => {
         setError(false)
         setErrorMessage('')
