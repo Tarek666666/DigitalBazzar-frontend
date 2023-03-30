@@ -13,7 +13,11 @@ function AdminProducts() {
            const {data} = await axios.get('https://digital-bazzar-backend.herokuapp.com/products/allproducts' , {
 
            credentials: "include",
-           method: "GET"
+           method: "GET",
+           headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*"
+        }
      });
            dispatch({type:'FETCH_PRODUCTS_SUCCESS' , payload:data})
         } catch (error) {
@@ -21,7 +25,7 @@ function AdminProducts() {
         }
     }
 
-    async  function checkIsAdmin(){
+ /**   async  function checkIsAdmin(){
       const {data} = await axios.get('https://digital-bazzar-backend.herokuapp.com/admin/dashboard' , {
 
               credentials: "include",
@@ -34,10 +38,10 @@ function AdminProducts() {
          // window.location.href = '/signin'
          console.log('didnt work')
       }
-    }
+    } */
     
     useEffect(()=>{
-        checkIsAdmin()
+      //  checkIsAdmin()
         getProducts()
 
     },[])
