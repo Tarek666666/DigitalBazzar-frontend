@@ -63,6 +63,7 @@ export function CartProvider({ children }) {
     const increaseFromCart = (id, price) => {
         fetch("https://digital-bazzar-backend.herokuapp.com/user/increaseitem", {
             method: "POST",
+            credentials: "include",
             headers: {
                 "Content-Type": "application/json",
             },
@@ -97,6 +98,7 @@ export function CartProvider({ children }) {
     const decreaseFromCart = (id, price) => {
         fetch("https://digital-bazzar-backend.herokuapp.com/user/decreaseitem", {
             method: "POST",
+            credentials: "include",
             headers: {
                 "Content-Type": "application/json",
             },
@@ -131,6 +133,7 @@ export function CartProvider({ children }) {
     const deleteFromCart = (id, price) => {
         fetch("https://digital-bazzar-backend.herokuapp.com/user/deletefromcart", {
             method: "POST",
+            credentials: "include",
             headers: {
                 "Content-Type": "application/json",
             },
