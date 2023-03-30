@@ -54,6 +54,7 @@ function Account({ loggedUser }) {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
+                "Access-Control-Allow-Origin": "*"
             },
         })
             .then((res) => {
