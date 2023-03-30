@@ -15,6 +15,8 @@ function AdminEdit() {
     const [alert , setAlert] = useState(false)
     const [errorMessage , setErrorMessage] = useState('')
     const [error , setError] = useState(false)
+
+    
     
   
     const handleNameChange = (e) => {
@@ -58,7 +60,8 @@ function AdminEdit() {
           credentials: "include",
           method: "POST",
           headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            "Access-Control-Allow-Origin": "*"
           },
           body: JSON.stringify( {name , price , image , description , featured , brand , category} )
         })
