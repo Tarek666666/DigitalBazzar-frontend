@@ -1,16 +1,25 @@
 import React from "react";
 import { RiShoppingCart2Fill } from "react-icons/ri";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect , useState } from "react";
 import CartContext from "../context/CartContext";
 import { Link } from "react-router-dom";
 
 
 function Cart({ isDarkMode, loggedUser }) {
     const [items, localCart ,total] = useContext(CartContext);
+    const [itemsTest , setItemsTest] = useState([])
 
-    if(loggedUser){
-        console.log(loggedUser , loggedUser.cart , '=====> from cart page')
-    }
+    console.log(itemsTest)
+
+    useEffect(() => {
+        if(loggedUser){
+
+            setItemsTest(loggedUser.cart)
+            console.log(loggedUser , loggedUser.cart , '=====> from cart page')
+        }
+
+        console.log(itemsTest)
+    }, []);
 
     return (
         <div
