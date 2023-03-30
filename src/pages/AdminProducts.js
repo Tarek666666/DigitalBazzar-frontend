@@ -10,7 +10,11 @@ function AdminProducts() {
    async function getProducts(){
         dispatch({type:'FETCH_PRODUCTS_REQUEST'})
         try {
-           const {data} = await axios.get('https://digital-bazzar-backend.herokuapp.com/products/allproducts');
+           const {data} = await axios.get('https://digital-bazzar-backend.herokuapp.com/products/allproducts' , {
+
+           credentials: "include",
+           method: "GET"
+     });
            dispatch({type:'FETCH_PRODUCTS_SUCCESS' , payload:data})
         } catch (error) {
            
