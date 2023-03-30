@@ -7,11 +7,13 @@ function CheckoutSuccess() {
 
     useEffect(() => {
         fetch("https://digital-bazzar-backend.herokuapp.com/user/clearcart" , { 
-            method: "POST",
+            method: "GET",
             credentials: "include"
         })
             .then((res) => res.json())
-            .then((data) => {})
+            .then((data) => {
+                console.log(data)
+            })
             .catch((err) => console.log(err));
     }, []);
 
