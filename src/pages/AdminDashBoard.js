@@ -16,14 +16,18 @@ function AdminDashBoard() {
 
     async  function checkIsAdmin(){
         const {data} = await axios.get('https://digital-bazzar-backend.herokuapp.com/admin/dashboard' , {
-            
-            credentials: 'include'
+           
+        credentials: "include",
+        method: "GET",
           });
+
+          console.log(data)
 
         if(data.isAuth){
             console.log('you can see admin dashboard')
         }else{
-            window.location.href = '/signin'
+         //   window.location.href = '/signin'
+         console.log('didnt work')
         }
       }
                                              
