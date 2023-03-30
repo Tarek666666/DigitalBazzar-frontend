@@ -33,7 +33,7 @@ function Account({ loggedUser }) {
                 if (data.success) {
                     window.localStorage.setItem("token", data.token);
                     console.log(data);
-                    window.location.href = "./";
+                  //  window.location.href = "./";
                 } else {
                     setError(true);
                     setErrorMessage(data.msg);
