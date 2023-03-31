@@ -10,25 +10,35 @@ function OrdersPage() {
 
     async function fetchOrders() {
         setLoading(true);
-        try {
-            const fetchOrders = await axios.get("https://digital-bazzar-backend.herokuapp.com/admin/dashboard/orders" ,{ credentials: "include",
-            method: "GET" ,
+
+        fetch("https://digital-bazzar-backend.herokuapp.com/admin/dashboard/orders", {
+            credentials: "include",
+            method: "GET",
             headers: {
                 "Content-Type": "application/json",
                 "Access-Control-Allow-Origin": "*"
-            }});
-            setLoading(false);
-            setError(false);
-            //only if there is order in db
-            if (fetchOrders.data.ordersInDb) {
-                setOrders(fetchOrders.data.ordersInDb);
-            }
-        } catch (error) {
-            //to display later if error happens
-            setError(true);
-            setLoading(false);
-            setErrorMessage(error);
-        }
+            },
+        })
+            .then((res) => {
+         
+                return res.json();
+            })
+            .then((data) => {
+
+                setLoading(false);
+                setError(false);
+                    if(data.ordersInDb){
+                        setOrders(fetchOrders.data.ordersInDb);
+                    }else{
+                      console.log('data' , data)
+                    }
+            })
+            .catch((err) => {
+                setError(true);
+                setLoading(false);
+                setErrorMessage(error);
+            });
+       
     }
 
     useEffect(() => {
