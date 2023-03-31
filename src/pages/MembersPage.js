@@ -8,7 +8,6 @@ function MembersPage() {
     const [error, setError] = useState(false);
     const [errorMessage, setErrorMessage] = useState();
 
-
     async function fetchMembers() {
         setLoading(true);
         fetch("https://digital-bazzar-backend.herokuapp.com/admin/dashboard/members", {
@@ -41,7 +40,7 @@ function MembersPage() {
     }
 
     useEffect(() => {
-      //  checkIsAdmin();
+      
         fetchMembers();
     }, []);
     return (

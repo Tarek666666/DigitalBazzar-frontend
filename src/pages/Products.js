@@ -80,7 +80,7 @@ function Products() {
 
     return (
         <>
-            <h3 className='store-title w-25 m-auto text-center py-3 fw-bold'>OUR STORE</h3>
+            <h3 className='store-title  m-auto text-center py-3 fw-bold'>OUR STORE</h3>
             <div className={!isDarkMode ? "container-xxl container-xxl-dark" : "container-xxl"}>
                 <div className='row prod-opt-container mb-5'>
                     <div className='col-2 opt-container'>

@@ -29,7 +29,7 @@ function OrdersPage() {
                     setOrders(data.ordersInDb);
                 } else {
                    
-                    window.location.href = './'
+                    window.location.href = 'https://digital-bazzar.netlify.app/'
                 }
             })
             .catch((err) => {

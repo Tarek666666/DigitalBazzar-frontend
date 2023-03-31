@@ -144,12 +144,7 @@ a {
 
 /* Start : => second nav design */
 
-.search-container{
 
-  align-self: center;
-  width: 70% !important;
-  height: 60px !important;
-}
 
 .input-group{
 
@@ -195,12 +190,13 @@ a {
 .second-nav-container {
 
   display: flex !important;
-  flex-direction: row;
+  flex-direction: row !important;;
   justify-content: center;
   align-items: center;
   width: 100%;
   margin: auto;
   height: 160px;
+  
   
 }
 
@@ -438,8 +434,8 @@ a {
 }
 .badge{
   background-color: var(--color-main-yellow);
-  color: white;
-  font-size: 15px;
+  color: var(--color-light-blue) !important;
+  font-weight: bold!important;
   border-radius: 50% 50% !important;
 }
 .cart-text{

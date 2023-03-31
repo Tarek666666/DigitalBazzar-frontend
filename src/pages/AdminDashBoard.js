@@ -1,18 +1,17 @@
 import React from 'react';
-import { useEffect , useState , useContext } from 'react'; 
+import { useEffect ,  useContext } from 'react'; 
 import {HiUsers} from 'react-icons/hi' 
 import {SiShopify} from 'react-icons/si'  
 import {BsFileTextFill} from 'react-icons/bs'
 import {ImBoxAdd} from 'react-icons/im'
 import { Link } from 'react-router-dom';
-import axios from 'axios';
 import '../css/adminDashBoard.css'
 import ThemeContext from '../context/ThemeContext';
 
 
 function AdminDashBoard() {
 
-    const [theme , isDarkMode, setTheme] = useContext(ThemeContext)
+    const [theme ] = useContext(ThemeContext)
 
     async  function checkIsAdmin(){
 
