@@ -26,7 +26,7 @@ function MembersPage() {
                 if (data.membersInDb) {
                     setLoading(false);
                     setError(false);
-                    setOrders(data.membersInDb);
+                    setMembers(data.membersInDb);
                 } else {
                    
                     window.location.href = './'
