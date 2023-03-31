@@ -27,12 +27,8 @@ function OrdersPage() {
 
                 setLoading(false);
                 setError(false);
-                console.log('data' , data)
-                 /**   if(data.ordersInDb){
-                        setOrders(fetchOrders.data.ordersInDb);
-                    }else{
-                     
-                    } */
+                setOrders(data.ordersInDb);
+                  
             })
             .catch((err) => {
                 setError(true);
