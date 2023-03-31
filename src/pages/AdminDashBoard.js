@@ -29,12 +29,13 @@ function AdminDashBoard() {
             return res.json();
         })
         .then((data) => {
-                if(data.isAuth){
+                if(data.isAuth === true){
                     //case user is existed and the role is admin
                     console.log('you can see admin dashboard')
                 }else{
                    //case role is not admin or no user ==> redirect to signin page
                   window.location.href = '/signin'
+                  console.log('not Auth')
                 }
         })
         .catch((err) => {
