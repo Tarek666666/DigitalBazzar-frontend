@@ -72,7 +72,7 @@
 
 .subscribe-btn{
     
-    background-color: var(--color-light-blue);
+    background-color: var(--color-light-blue) !important;
     height: 35px;
     border: none;
     

@@ -601,6 +601,22 @@
         font-size: 14px !important;
         word-wrap: break-word;
     }
+    .subscribe-btn{
+        margin-top: 7px ;
+    }
+
+    .admin-dashboard-container{
+
+        height: 800px !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .admin-dashboard-container div{
+        width: 80% !important;
+    }
   }
 
 

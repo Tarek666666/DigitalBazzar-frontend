@@ -63,7 +63,7 @@ function AdminDashBoard() {
                                 <SiShopify className='dashboard-icon' size={100}/>
                                 <Link className='dashboard-link' to={'/dashboard/products'}>PRODUCTS</Link>
                             </div>
-                            <div className='col-3 icon-link-container py-3  hidden-responsive hidden-responsive-medium'>
+                            <div className='col-3 icon-link-container py-3  '>
                                 
                                 <BsFileTextFill className='dashboard-icon ' size={100}/>
                                 <Link className='dashboard-link' to={'/dashboard/orders'}>ORDERS</Link>
