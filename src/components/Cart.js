@@ -7,19 +7,18 @@ import { Link } from "react-router-dom";
 
 function Cart({ isDarkMode, loggedUser }) {
     const [items, localCart ,total] = useContext(CartContext);
-   // const [itemsTest , setItemsTest] = useState([])
+   function hideCart(){
+
+    window.location.href = '/cart'
+    
+
+   }
 
   
 
     useEffect(() => {
        
-      /*  if(loggedUser){
-
-            setItemsTest(loggedUser.cart)
-            console.log(loggedUser , loggedUser.cart , '=====> from cart page')
-            console.log(itemsTest , 'aaaaaaaa')
-        }
-        console.log(itemsTest , 'aaaaaaaa') */
+   
     }, []);
 
     return (
@@ -94,15 +93,10 @@ function Cart({ isDarkMode, loggedUser }) {
                 })}
              
 
-                <button className='view-cart-btn'>
-                    {" "}
-                    <Link
-                        className='d-flex justify-content-center align-items-center w-100 h-100'
-                        to={"/cart"}
-                    >
-                        {" "}
-                        SHOW CART{" "}
-                    </Link>
+                <button className='view-cart-btn' onClick={hideCart}>
+                   
+                        SHOW CART
+                    
                 </button>
             </ul>
         </div>
