@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.78692590.css",
+    "main.js": "/static/js/main.ece83673.js",
+    "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
+    "static/media/asus.png": "/static/media/asus.56a99368292639525b6a.png",
+    "static/media/samsung.png": "/static/media/samsung.1abdecce3f738ad4b341.png",
+    "static/media/iphone.png": "/static/media/iphone.de3ff90cf015c3173623.png",
+    "static/media/msi-dragon.png": "/static/media/msi-dragon.09187f645be2dc6ad2c8.png",
+    "static/media/lg.png": "/static/media/lg.233a2b057e77dc3414aa.png",
+    "static/media/sony.png": "/static/media/sony.87b905c5a0010bf4c29b.png",
+    "static/media/hp.png": "/static/media/hp.9cff598b84536a4e4ffe.png",
+    "static/media/huw.png": "/static/media/huw.6a9abbd239244c08cf36.png",
+    "static/media/logo.png": "/static/media/logo.92f4e8f4413efe29a300.png",
+    "index.html": "/index.html",
+    "main.78692590.css.map": "/static/css/main.78692590.css.map",
+    "main.ece83673.js.map": "/static/js/main.ece83673.js.map",
+    "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.78692590.css",
+    "static/js/main.ece83673.js"
+  ]
+}
