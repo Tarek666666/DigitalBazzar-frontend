@@ -1009,6 +1009,27 @@
     .admin-product-card{
         width: 75% !important;
        }
+
+       .product-details-container{
+
+        background-color: rebeccapurple !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 5px !important;
+    }
+    .details-img-container{
+        width: 100% !important;
+        height: 350px !important;
+        margin: none !important;
+
+    }
+    .details-info-container{
+        width: 100% !important;
+        min-height: 250px !important;
+        justify-content: center;
+        align-items: center;
+    }
   
   
   }
