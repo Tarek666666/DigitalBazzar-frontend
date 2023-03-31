@@ -565,7 +565,7 @@
     .details-img-container{
         width: 100% !important;
         height: 250px !important;
-        margin: none !important;
+       margin-left: 0px !important;
 
     }
     .details-info-container{
