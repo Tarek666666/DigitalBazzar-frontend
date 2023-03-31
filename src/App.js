@@ -30,6 +30,7 @@ import OrdersPage from './pages/OrdersPage';
 import NotFound from './pages/NotFound';
 import MembersPage from './pages/MembersPage';
 import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 
 function App() {

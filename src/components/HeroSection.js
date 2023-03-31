@@ -4,19 +4,19 @@ function HeroSection({isDarkMode}) {
   return (
     <div className={!isDarkMode ? 'hero-section-dark hidden-responsive ' : ' hidden-responsive'}>
     <div className={'hero-section'}>
-          <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
+          <div id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel">
+                <div className="carousel-inner">
+                  <div className="carousel-item active">
                       <div className='asus'></div>
                   </div>
-                  <div class="carousel-item  ">
+                  <div className="carousel-item  ">
                       <div className='samsung'></div>
                   </div>
-                  <div class="carousel-item ">
+                  <div className="carousel-item ">
                       <div className='msi-dragon'></div>
                   </div>
                   
-                  <div class="carousel-item ">
+                  <div className="carousel-item ">
                       <div className='iphone'></div>
                   </div>
                 </div>
@@ -34,10 +34,10 @@ function HeroSection({isDarkMode}) {
                           <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
                           <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
                         </div>
-                        <div class="carousel-inner">
-                          <div class="carousel-item active" data-bs-interval="10000">
-                            <img src="images/products/msi-laptop.png" class="d-block w-100" alt="msi"/>
-                            <div class="carousel-caption d-none d-md-block">
+                        <div className="carousel-inner">
+                          <div className="carousel-item active" data-bs-interval="10000">
+                            <img src="images/products/msi-laptop.png" className="d-block w-100" alt="msi"/>
+                            <div className="carousel-caption d-none d-md-block">
                        
                                     <h5>Super charged</h5>
                                     <h1>Special Sale</h1>
@@ -45,18 +45,18 @@ function HeroSection({isDarkMode}) {
                                     
                             </div>
                           </div>
-                          <div class="carousel-item" data-bs-interval="2000">
-                            <img src="images/products/acer-laptop.png" class="d-block w-100" alt="acer"/>
-                            <div class="carousel-caption d-none d-md-block">
+                          <div className="carousel-item" data-bs-interval="2000">
+                            <img src="images/products/acer-laptop.png" className="d-block w-100" alt="acer"/>
+                            <div className="carousel-caption d-none d-md-block">
                                  <h5>15% OFF</h5>
                                     <h1>ACER pro max</h1>
                                     <p>From <span className='old-price'>$2200.00</span> to only <span className='new-price'>$1775.00</span></p>
                                     
                             </div>
                           </div>
-                          <div class="carousel-item">
-                            <img src="images/products/iphone-pro14.png" class="d-block w-100" alt="..."/>
-                            <div class="carousel-caption d-none d-md-block">
+                          <div className="carousel-item">
+                            <img src="images/products/iphone-pro14.png" className="d-block w-100" alt="..."/>
+                            <div className="carousel-caption d-none d-md-block">
                                     <h5>New Arrival</h5>
                                     <h1>Ipone Max</h1>
                                     <p>start from  $ 999.99</p>
@@ -64,13 +64,13 @@ function HeroSection({isDarkMode}) {
                             </div>
                           </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
+                        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span className="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
+                        <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span className="visually-hidden">Next</span>
                         </button>
               </div>
               </div>
