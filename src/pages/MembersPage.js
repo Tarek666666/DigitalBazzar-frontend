@@ -29,7 +29,7 @@ function MembersPage() {
                     setMembers(data.membersInDb);
                 } else {
                    
-                    window.location.href = './'
+                    window.location.href = 'https://digital-bazzar.netlify.app/'
                 }
             })
             .catch((err) => {
