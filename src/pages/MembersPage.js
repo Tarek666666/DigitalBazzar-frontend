@@ -11,20 +11,33 @@ function MembersPage() {
 
     async function fetchMembers() {
         setLoading(true);
-        try {
-            const fetchMembers = await axios("https://digital-bazzar-backend.herokuapp.com/admin/dashboard/members" ,{ credentials: "include",
-            method: "POST"});
-
-            console.log(fetchMembers.data.membersInDb);
-            setLoading(false);
-            setError(false);
-            setMembers(fetchMembers.data.membersInDb);
-        } catch (error) {
-            //to display later if error happens
-            setError(true);
-            setLoading(false);
-            setErrorMessage(error);
-        }
+        fetch("https://digital-bazzar-backend.herokuapp.com/admin/dashboard/members", {
+            credentials: "include",
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                "Access-Control-Allow-Origin": "*",
+            },
+        })
+            .then((res) => {
+                return res.json();
+            })
+            .then((data) => {
+                if (data.membersInDb) {
+                    setLoading(false);
+                    setError(false);
+                    setOrders(data.membersInDb);
+                } else {
+                   
+                    window.location.href = './'
+                }
+            })
+            .catch((err) => {
+                setError(true);
+                setLoading(false);
+                setErrorMessage(error);
+            });
+    
     }
 
     useEffect(() => {

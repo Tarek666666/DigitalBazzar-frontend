@@ -94,7 +94,7 @@ function Signup() {
                      {error === true && responseState.status && errorMessage.length === 0  && <p className='respons-state-msg-fail'> Failed! {responseState.status.msg} </p>}    
                     <div className="form-group">
                     <label htmlFor="username">Username</label>
-                    <input onChange={handleUserNameChange} type="text" className="form-control" id="username" placeholder="Enter password" />
+                    <input onChange={handleUserNameChange} type="text" className="form-control" id="username" placeholder="Enter Your Username" />
                     </div>
                     <div className="form-group ">
                     <label htmlFor="email">Email</label>

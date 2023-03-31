@@ -29,6 +29,8 @@ function AdminDashBoard() {
             return res.json();
         })
         .then((data) => {
+
+            console.log(data)
                 if(data.isAuth === true){
                     //case user is existed and the role is admin
                     console.log('you can see admin dashboard')

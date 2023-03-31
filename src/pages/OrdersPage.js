@@ -16,35 +16,30 @@ function OrdersPage() {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
-                "Access-Control-Allow-Origin": "*"
+                "Access-Control-Allow-Origin": "*",
             },
         })
             .then((res) => {
-         
                 return res.json();
             })
             .then((data) => {
-
-               if(data.ordersInDb){
-                setLoading(false);
-                setError(false);
-                setOrders(data.ordersInDb);
-               }else{
-
-                console.log('kick to home')
-               }
-                  
+                if (data.ordersInDb) {
+                    setLoading(false);
+                    setError(false);
+                    setOrders(data.ordersInDb);
+                } else {
+                   
+                    window.location.href = './'
+                }
             })
             .catch((err) => {
                 setError(true);
                 setLoading(false);
                 setErrorMessage(error);
             });
-       
     }
 
     useEffect(() => {
-      
         fetchOrders();
     }, []);
 
