@@ -1,3 +1,12 @@
+[build]
+  command = "npm run build"
+  publish = "build/"
+
+[build.environment]
+  BASE = "/"
+
+    
+
 [[redirects]]
 from = '/*'
 to = "/index.html"
