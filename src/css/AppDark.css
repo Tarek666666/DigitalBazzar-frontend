@@ -617,6 +617,17 @@
     .admin-dashboard-container div{
         width: 80% !important;
     }
+
+    .members-table-container {
+
+        width: 100% !important;
+
+    }
+    .members-table-container  .order-table{
+
+        width: 100%;
+        background-color: #cf930f;
+    }
   }
 
 

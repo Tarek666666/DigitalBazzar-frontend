@@ -51,7 +51,7 @@ function AdminDashBoard() {
   return (
     <div className='container-xxl  mt-5 mb-5'>
         <div className={theme==='dark' ? 'row col-12 admin-dashboard-container-dark' :'row col-12 admin-dashboard-container'}>
-                            <div className='col-3 icon-link-container py-3 hidden-responsive hidden-responsive-medium'>
+                            <div className='col-3 icon-link-container py-3 '>
                                 <HiUsers className='dashboard-icon' size={100} />
                                 <Link className='dashboard-link'to={'/dashboard/members'} >MEMBERS</Link>
                             </div>

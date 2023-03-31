@@ -44,7 +44,8 @@ function MembersPage() {
         fetchMembers();
     }, []);
     return (
-        <table className='order-table'>
+      <div className="members-table-container">
+          <table className='order-table'>
             <thead>
                 {loading && (
                     <tr>
@@ -79,6 +80,7 @@ function MembersPage() {
                 </tbody>
             )}
         </table>
+      </div>
     );
 }
 
