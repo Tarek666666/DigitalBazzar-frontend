@@ -25,9 +25,14 @@ function OrdersPage() {
             })
             .then((data) => {
 
+               if(data.ordersInDb){
                 setLoading(false);
                 setError(false);
                 setOrders(data.ordersInDb);
+               }else{
+
+                console.log('kick to home')
+               }
                   
             })
             .catch((err) => {
