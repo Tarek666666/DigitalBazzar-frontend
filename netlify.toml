@@ -1,5 +1,5 @@
 [build]
-base = "build/"
+base = "/build"
 
 [[redirects]]
 from = '/*'
