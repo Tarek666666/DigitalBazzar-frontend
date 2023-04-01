@@ -61,7 +61,7 @@ function Home() {
                             <div>
                                 <BiSupport color='white' size={45} />
                                 <h3 className='text-white'>Support</h3>
-                                <p className='text-white'>shop with an exprt</p>
+                                <p className='text-white'>shop with an expert</p>
                             </div>
                             <div>
                                 <TbTruckReturn color='white' size={45} />

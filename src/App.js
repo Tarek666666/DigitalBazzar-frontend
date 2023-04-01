@@ -44,11 +44,8 @@ function App() {
       return res.json();
     })
     .then((data) => {
-      
-
       if(data.cart){
         setLoggedUser(data)
-        console.log(data , 'the data')
       }
       
     })
