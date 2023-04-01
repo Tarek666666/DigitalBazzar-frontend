@@ -23,15 +23,15 @@ function Signup() {
     }
     const handleRePasswordChange = (e)=>{
 
-      if(e.target.value.length === password.length || e.target.value.length > password.length  && e.target.value !== password){
+      if(e.target.value.length === password.length){
 
-        setError(true)
-        setErrorMessage('Passwords Are not Match!')
-
-      }else{
-        setRePassword(e.target.value)
+        if(e.target.value !== password){
+          setError(true)
+          setErrorMessage('Passwords Are not Match!')
+        }else{
+          setRePassword(e.target.value)
+        }
       }
-        
     }
     const handleUserNameChange = (e)=>{
         setusername(e.target.value.toLowerCase().trim())

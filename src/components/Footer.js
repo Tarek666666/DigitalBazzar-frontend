@@ -32,10 +32,10 @@ function Footer() {
                           <p>+  31682565642</p>
                           <p>tarek.aljabr.official@gmail.com</p>
                           <section className='social-media-container'>
-                              <a href='https://www.twitter.com'><AiFillTwitterCircle size={52}/></a>
-                              <a href='https://www.facebook.com'><FaFacebook size={48}/></a>
-                              <a href='https://www.youtube.com'><AiFillYoutube size={62}/></a>
-                              <a href='https://www.instagram.com'><FaInstagram size={52}/></a>
+                              <a href='https://www.twitter.com' target="_blank"><AiFillTwitterCircle size={52}/></a>
+                              <a href='https://www.facebook.com' target="_blank"><FaFacebook size={48}/></a>
+                              <a href='https://www.youtube.com' target="_blank"><AiFillYoutube size={62}/></a>
+                              <a href='https://www.instagram.com' target="_blank"><FaInstagram size={52}/></a>
                           </section>
 
                       </div>

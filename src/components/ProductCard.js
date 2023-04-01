@@ -20,11 +20,11 @@ function ProductCard({ product }) {
     useEffect(()=>{
 
         setTimeout(() => {
+
             setAlert(false)
             setMessage('')
             
         }, 1000);
-
 
     },[])
 
@@ -50,20 +50,20 @@ function ProductCard({ product }) {
                 $ {product.price}
             </p>
 
-           {!alert && message.length === 0 &&  <button
-                onClick={[ changeAddToCartBtn, () => addToCart(product) ]}
-            
+           { !alert && message.length === 0 && <button
+                onClick={() => {
+                    addToCart(product);
+                    changeAddToCartBtn();
+                  }}
                 value={product._id}
                 className={!isDarkMode ? "add-cart-btn add-cart-btn-dark " : "add-cart-btn"}
             >
                 {" "}
                 ADD TO CART{" "}
             </button>}
-            {alert && message.length > 0 &&  <button
-                onClick={[ changeAddToCartBtn, () => addToCart(product) ]}
+            { alert && message.length > 0 && <button
             
-                value={product._id}
-                className={!isDarkMode ? "add-cart-btn add-cart-btn-dark alert-added " : "add-cart-btn alert-added"}
+                className={"alert-added"}
             >
                 {" "}
                 {message}{" "}
