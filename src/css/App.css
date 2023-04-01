@@ -580,3 +580,8 @@ a {
   color: var(--color-main-blue);
   font-weight: bold;
 }
+.super-collection-container .row{
+
+  width: 85%;
+  margin: auto;
+}

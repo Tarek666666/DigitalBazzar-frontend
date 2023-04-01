@@ -127,6 +127,10 @@
     background-color: #161B40;
     width: 100%;
 }
+.super-collection-container-dark .row{
+    margin: auto;
+    width: 85%;
+}
 .hero-section-dark{
     background-color: #161B40;
 }

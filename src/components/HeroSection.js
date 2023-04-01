@@ -23,7 +23,7 @@ function HeroSection({isDarkMode}) {
           </div>
     </div>
 
-    <div className={!isDarkMode ? 'super-collection-container-dark super-collection-container container-xxl hidden-responsive-medium hidden-responsive-larg' :'super-collection-container container-xxl hidden-responsive-medium hidden-responsive-larg'}>
+    <div className={!isDarkMode ? 'super-collection-container-dark super-collection-container  hidden-responsive-medium hidden-responsive-larg' :'super-collection-container  hidden-responsive-medium hidden-responsive-larg'}>
         <div className='row '>
 
               <div className=' col-6 left-section-container'>
