@@ -234,7 +234,11 @@ textarea {
   
 .alert-added{
     background-color: rgb(153, 221, 52) !important;
-    color: black !important;
+    background-color: #99dd34!important;
+    padding: 3px;
+    border-radius: 10px 10px;
+    border: none;
+    color: white !important;
 }
 .back-link{
 

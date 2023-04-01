@@ -26,7 +26,7 @@ function ProductCard({ product }) {
             
         }, 1000);
 
-    },[])
+    },[message])
 
     return (
         <div className='one-product-container d-flex flex-column justify-content-start align-items-center '>
