@@ -23,11 +23,6 @@ function CartPage({ loggedUser }) {
     }).format(localCart.reduce((acc, item) => acc + item.itemInDb.price * item.qty, 0));
 
 
-    const goToProductPage = async (id)=>{
-      
-        window.location.href = `https://digital-bazzar.netlify.app/productdetails/${id}`
-
-    }
 
     async function handleCheckout() {
         console.log(items);
@@ -112,7 +107,7 @@ function CartPage({ loggedUser }) {
                     items.map((item) => {
                         return (
                             <div key={item._id} className='item-container-cartpage mb-2 mt-2'>
-                                <img onClick={()=> goToProductPage(item._id)} src={item.productId.image} />
+                                <img src={item.productId.image} />
                                 <div className='item-info-container-cartpage'>
                                     <span className='item-cart-title-cartpage fw-bold'>
                                         {item.productId.name}
