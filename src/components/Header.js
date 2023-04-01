@@ -11,7 +11,7 @@ import "../css/AppDark.css";
 
 
 function Header({ theme, loggedUser }) {
-    const [searchKey, setSearchKey] = useState("");
+    const [searchKey, setSearchKey] = useState("a");
     const isDarkMode = theme === "dark";
 
     function handleSearchKeyChange(e) {

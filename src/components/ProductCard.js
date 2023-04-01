@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext , useState , useEffect } from "react";
 import ReactStars from "react-rating-stars-component";
 import { Link } from "react-router-dom";
 import CartContext from "../context/CartContext";
@@ -7,6 +7,26 @@ import ThemeContext from "../context/ThemeContext";
 function ProductCard({ product }) {
     const [items, localCart, total, addToCart] = useContext(CartContext);
     const [theme, isDarkMode] = useContext(ThemeContext);
+    const [alert , setAlert] = useState(false);
+    const [message , setMessage] = useState('');
+
+    const  changeAddToCartBtn = () => {
+        setAlert(true)
+        setMessage('Product is Added')
+    }
+
+
+
+    useEffect(()=>{
+
+        setTimeout(() => {
+            setAlert(false)
+            setMessage('')
+            
+        }, 1000);
+
+
+    },[])
 
     return (
         <div className='one-product-container d-flex flex-column justify-content-start align-items-center '>
@@ -30,14 +50,24 @@ function ProductCard({ product }) {
                 $ {product.price}
             </p>
 
-            <button
-                onClick={() => addToCart(product)}
+           {!alert && message.length === 0 &&  <button
+                onClick={[ changeAddToCartBtn, () => addToCart(product) ]}
+            
                 value={product._id}
                 className={!isDarkMode ? "add-cart-btn add-cart-btn-dark " : "add-cart-btn"}
             >
                 {" "}
                 ADD TO CART{" "}
-            </button>
+            </button>}
+            {alert && message.length > 0 &&  <button
+                onClick={[ changeAddToCartBtn, () => addToCart(product) ]}
+            
+                value={product._id}
+                className={!isDarkMode ? "add-cart-btn add-cart-btn-dark alert-added " : "add-cart-btn alert-added"}
+            >
+                {" "}
+                {message}{" "}
+            </button>}
 
             <Link
                 className={

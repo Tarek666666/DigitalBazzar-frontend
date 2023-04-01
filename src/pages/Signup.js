@@ -22,7 +22,16 @@ function Signup() {
       setPassword(e.target.value)
     }
     const handleRePasswordChange = (e)=>{
+
+      if(e.target.value.length === password.length || e.target.value.length > password.length  && e.target.value !== password){
+
+        setError(true)
+        setErrorMessage('Passwords Are not Match!')
+
+      }else{
         setRePassword(e.target.value)
+      }
+        
     }
     const handleUserNameChange = (e)=>{
         setusername(e.target.value.toLowerCase().trim())
@@ -38,15 +47,21 @@ function Signup() {
       //handle user inputs errors ----//
       event.preventDefault();
       const regex =  /^[0-9\s]+$/; 
+      const regexEmail =  /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
      
     if(email.trim() === '' || username.trim() === ''){
       setError(true)
       setErrorMessage('Username & Email adress cant be empty !')
 
-    } else if(password.trim() !== rePassword.trim()){
+    } else if(regexEmail.test(email) === false){
+      setError(true)
+      setErrorMessage('Enter a Valid Email')
+    }
+    else if(password.trim() !== rePassword.trim()){
       setError(true)
       setErrorMessage('Passwords are not match!')
-    }else if(password.length < 8 || password.includes(' ')){
+    }
+    else if(password.length < 8 || password.includes(' ')){
       setError(true)
       setErrorMessage('Password Should be 8 charachtares at least, no spaces allowed')
     }else if(regex.test(phone) === false){
