@@ -24,8 +24,8 @@ function CartPage({ loggedUser }) {
 
 
     const goToProductPage = async (id)=>{
-        
-        window.location.href = `https://digital-bazzar-backend.herokuapp.com/products/productdetails/${id}`
+      
+        window.location.href = `https://digital-bazzar.netlify.app/productdetails/${id}`
 
     }
 
