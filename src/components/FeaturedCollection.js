@@ -5,7 +5,7 @@ import ProductCard from '../components/ProductCard';
 function FeaturedCollection({featuredProds , isDarkMode}) {
 
   return (
-        <div className={!isDarkMode ? 'container-xxl featured-collection-conitaner-dark py-5 hidden-responsive' :'container-xxl featured-collection-conitaner py-5 hidden-responsive'}>
+        <div className={!isDarkMode ? 'featured-collection-conitaner-dark py-5 hidden-responsive' :'featured-collection-conitaner py-5 hidden-responsive'}>
                 <div className='row d-flex justify-content-center'>
                     <div className='col-10'>
                         <h5 className={!isDarkMode ? 'fw-bold mt-5 py-3  text-white' : 'fw-bold mt-5 py-3  '}>Featured Collection</h5>
