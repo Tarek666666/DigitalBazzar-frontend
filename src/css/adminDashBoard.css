@@ -235,7 +235,7 @@ textarea {
 .alert-added{
     background-color: rgb(153, 221, 52) !important;
     background-color: #99dd34!important;
-    padding: 3px;
+    padding: 2px 5px;
     border-radius: 10px 10px;
     border: none;
     color: white !important;

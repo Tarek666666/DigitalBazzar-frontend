@@ -65,11 +65,16 @@ function Header({ theme, loggedUser }) {
                                 </a>
                             </p>
                         </div>
-                        <div className={isDarkMode ? "dark col-2  " : "col-2  "}>
+                     { !loggedUser &&  <div className={isDarkMode ? "dark col-2  " : "col-2  "}>
                             <p >
                                 <a  className='text-white text-decoration-none'href='/signup'>New Account</a>
                             </p>
-                        </div>
+                        </div>}
+                      { loggedUser &&  <div className={isDarkMode ? "dark col-2  " : "col-2  "}>
+                            <p >
+                                <a  className='text-white text-decoration-none'href='/products'>SHOP</a>
+                            </p>
+                        </div>}
 
                         <div
                             className={

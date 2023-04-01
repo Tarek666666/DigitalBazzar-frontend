@@ -12,7 +12,7 @@ function ProductCard({ product }) {
 
     const  changeAddToCartBtn = () => {
         setAlert(true)
-        setMessage('Product is Added')
+        setMessage('Product Added')
     }
 
 
