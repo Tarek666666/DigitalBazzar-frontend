@@ -1,6 +1,5 @@
 import './css/App.css';
 import './css/productDetails.css';
-import axios from 'axios';
 import {BrowserRouter , Routes , Route } from 'react-router-dom';
 import { useState , useEffect  } from 'react';
 import Layout from './components/Layout';
@@ -38,6 +37,8 @@ function App() {
   const [loggedUser , setLoggedUser] = useState()
 
   useEffect(() => {
+
+    // when app loads // check if the user is loggedin ===> get users information
     fetch('https://digital-bazzar-backend.herokuapp.com/auth', { credentials: "include",
     method: "GET" })
     .then((res) => {
@@ -51,12 +52,6 @@ function App() {
     })
     .catch(err => console.log(err));
 
-   /* async function fetchData() {
-     const {data} = await axios.get('https://digital-bazzar-backend.herokuapp.com/auth');
-     console.log(data , 'from app to auth / ')
-    
-    }
-    fetchData();/* */
 
   }, []); 
   return (

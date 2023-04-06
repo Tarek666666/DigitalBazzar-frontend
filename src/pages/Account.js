@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../css/accountPage.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Account({ loggedUser }) {
     const [email, setEmail] = useState("");

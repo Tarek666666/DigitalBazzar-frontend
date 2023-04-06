@@ -4,6 +4,8 @@ import axios from "axios";
 
 const ProductsContext = createContext();
 
+
+// i just tried to use the reducer to practice the dispatch function 
 export function ProductsProvider({children}){
 const [products, dispatch] = useReducer(reducer , [])
 
@@ -12,7 +14,6 @@ async function bringProdsFirstTime(){
     dispatch({type:'FETCH_PRODUCTS_REQUEST'})
 
      try {
-
         const {data} = await axios.get('https://digital-bazzar-backend.herokuapp.com/products/allproducts');
         dispatch({type:'FETCH_PRODUCTS_SUCCESS' , payload:data})
         

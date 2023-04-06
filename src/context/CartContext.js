@@ -8,11 +8,11 @@ export function CartProvider({ children }) {
     const [cart, setCart] = useState([]);
     const [items, setItems] = useState([]);
     const [total, setTotal] = useState(0);
-    // setting the localcart to the items stored in localstorage if they exist otherwise set them initially to []
+    // setting the localcart to the items stored in localstorage if they exist otherwise set them initially to [] // to be used in case user is not logged in
     const [localCart, setLocalCart] = useState(
         localStorage.getItem("items") ? JSON.parse(localStorage.getItem("items")) : []
     );
-    // this code handels to cases, if the user is loggedin , the crud operation for shopping cart will be saved in db, otherwise inLocalstorage
+    // this code handels  cases of a loggedin user  , the crud operation for shopping cart will be saved in db, otherwise inLocalstorage
     const addToCart = (item) => {
         fetch("https://digital-bazzar-backend.herokuapp.com/user/addtocart", {
             method: "POST",
@@ -32,14 +32,16 @@ export function CartProvider({ children }) {
                     setTotal(data.total);
                     // case unknown user , handle the request and save info in localstorage to use as cart --------------------------->
                 } else {
+                    // case localcart is empty , first item to be added
                     if (localCart.length === 0) {
                         setLocalCart([{ ...data, qty: 1 }]);
                         localStorage.setItem("items", JSON.stringify([{ ...data, qty: 1 }]));
                     } else {
+                    // case localcart is not empty , check if item is already in cart     
                         const isAdded = localCart.filter(
                             (item) => item.itemInDb._id === data.itemInDb._id
                         );
-
+                    // case localcart is not empty & product is already in cart ====> find item and increase qty         
                         if (isAdded.length > 0) {
                             const updatedLocatCart = localCart.map((element) => {
                                 if (element.itemInDb._id === data.itemInDb._id) {
@@ -50,6 +52,7 @@ export function CartProvider({ children }) {
                             setLocalCart(updatedLocatCart);
                             localStorage.setItem("items", JSON.stringify(updatedLocatCart));
                         } else {
+                    // case localcart is not empty & product is not in cart ====> add item 
                             setLocalCart((prev) => [...prev, { ...data, qty: 1 }]);
                             localStorage.setItem(
                                 "items",
@@ -63,6 +66,8 @@ export function CartProvider({ children }) {
                 console.log(err);
             });
     };
+
+    // in cart page , function to increase the qty of an item
     const increaseFromCart = (id, price) => {
         fetch("https://digital-bazzar-backend.herokuapp.com/user/increaseitem", {
             method: "POST",
@@ -98,6 +103,8 @@ export function CartProvider({ children }) {
                 console.log(err);
             });
     };
+
+     // in cart page , function to decrease the qty of an item
     const decreaseFromCart = (id, price) => {
         fetch("https://digital-bazzar-backend.herokuapp.com/user/decreaseitem", {
             method: "POST",
@@ -132,7 +139,7 @@ export function CartProvider({ children }) {
                 console.log(err);
             });
     };
-
+    // in cart page , function to delete item
     const deleteFromCart = (id, price) => {
         fetch("https://digital-bazzar-backend.herokuapp.com/user/deletefromcart", {
             method: "POST",
@@ -165,8 +172,7 @@ export function CartProvider({ children }) {
     };
 
     useEffect(() => {
-        //   setTotal(items.reduce((acc, item) => acc + (item.price * item.qty), 0))
-
+     // fetching the loggedin user's cart from DB  // if user is not loggedin use localcart   
         fetch("https://digital-bazzar-backend.herokuapp.com/user/getcart", {
             credentials: "include",
             method: "GET",

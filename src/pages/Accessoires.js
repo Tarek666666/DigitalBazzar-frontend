@@ -2,9 +2,12 @@ import React , {useState , useContext}  from 'react'
 import ProductCard from '../components/ProductCard';
 import ProductsContext from '../context/ProductsContext';
 
+
+// the Accessories page if the user press on this catagory on main header or used a quick-link
 function Accessoires() {
-    const [products , dispatch] = useContext(ProductsContext)
+    const [products  ] = useContext(ProductsContext)
     let productsLoaded = products.products ? products.products : [];
+    // filtering the product to match catagory = accessories ==> display
     const [prodsAfterSearch , setProdsAfterSearch] = useState(productsLoaded.filter(prod => prod.category.toLowerCase() === 'accessoires'))
 
   return (
