@@ -1,25 +1,17 @@
 import React from "react";
 import { RiShoppingCart2Fill } from "react-icons/ri";
-import { useContext, useEffect , useState } from "react";
+import { useContext} from "react";
 import CartContext from "../context/CartContext";
-import { Link } from "react-router-dom";
 
 
 function Cart({ isDarkMode, loggedUser }) {
     const [items, localCart ,total] = useContext(CartContext);
-   function hideCart(){
 
+
+  // when user clicks on show cart ===> go to cart page  
+   function showCart(){
     window.location.href = '/cart'
-    
-
    }
-
-  
-
-    useEffect(() => {
-       
-   
-    }, []);
 
     return (
         <div
@@ -91,12 +83,8 @@ function Cart({ isDarkMode, loggedUser }) {
                         </li>
                     );
                 })}
-             
-
-                <button className='view-cart-btn' onClick={hideCart}>
-                   
+                <button className='view-cart-btn' onClick={showCart}>
                         SHOW CART
-                    
                 </button>
             </ul>
         </div>

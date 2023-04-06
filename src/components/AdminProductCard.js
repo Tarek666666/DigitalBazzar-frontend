@@ -3,6 +3,8 @@ import {AiTwotoneEdit} from 'react-icons/ai'
 import {MdDeleteForever} from 'react-icons/md'
 import { useNavigate } from "react-router-dom";
 
+
+// the Special item card for admin which includes the Edit/Delete buttons
 function AdminProductCard({product}) {
 
     const navigate = useNavigate();

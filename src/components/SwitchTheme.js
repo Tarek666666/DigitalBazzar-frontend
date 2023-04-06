@@ -4,11 +4,12 @@ import { BsSunFill, BsFillMoonStarsFill } from 'react-icons/bs';
 import ThemeContext from '../context/ThemeContext';
 
 function SwitchTheme() {
-
+  // getting the values from theme context
   const [theme , isDarkMode, setTheme] = useContext(ThemeContext)
 
   useEffect(() => {
 
+    // set the default to light
     setTheme('light')
    }, []); 
 

@@ -10,17 +10,16 @@ function ProductCard({ product }) {
     const [alert , setAlert] = useState(false);
     const [message , setMessage] = useState('');
 
+    //function to change message and display it on the button after user click on add item so he knows the admin is added
     const  changeAddToCartBtn = () => {
         setAlert(true)
         setMessage('Product Added')
     }
 
-
-
     useEffect(()=>{
 
+        // when component is mounted and everytime message variables is changed the function will rest the message to default and the alert to false so button is back to default
         setTimeout(() => {
-
             setAlert(false)
             setMessage('')
             

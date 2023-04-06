@@ -11,15 +11,10 @@ function Footer() {
     <>
     <div className={!isDarkMode ? 'subscribe-container subscribe-container-dark' : 'subscribe-container' }>
         
-          
                           <FaLocationArrow size={25} color='white'/>  <span>Sign Up For Newsletter</span>
-        
-          
-          
                           <input type="text" className="form-control subscribe-input"  placeholder='@ email adress'/>
-                          <button type="button" class="btn btn-primary subscribe-btn"> SUBSCRIBE</button>                                          
-         
-         
+                          <button type="button" class="btn btn-primary subscribe-btn"> SUBSCRIBE</button>          
+
     </div> 
     <div className={!isDarkMode ? 'footer-items-container footer-items-container-dark' : 'footer-items-container'}>
       <div className='container-xxl'>
@@ -76,7 +71,6 @@ function Footer() {
     <div className={!isDarkMode ? 'last-footer-container last-footer-container-dark' : 'last-footer-container'}>
           <p>Copyright © 2023 Digital Bazaar. All Rights Reserved - powerd by <span className='owner-footer'>TJ</span></p>
     </div>
-
     </>
   )
 }

@@ -1,12 +1,10 @@
 import React from 'react'
 import ProductCard from '../components/ProductCard';
 
-// componenet to be as the featured products displayed on home page , admin can update it
+// componenet to be used as the holder of featured products displayed on home page , admin can update a product and make it featured
 function FeaturedCollection({featuredProds , isDarkMode}) {
 
-
-
-  return (
+    return (
         <div className={!isDarkMode ? 'featured-collection-conitaner-dark py-5 hidden-responsive' :'featured-collection-conitaner py-5 hidden-responsive'}>
                 <div className='row d-flex justify-content-center'>
                     <div className='col-10'>

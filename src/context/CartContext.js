@@ -2,10 +2,13 @@ import { createContext, useState, useEffect } from "react";
 
 const CartContext = createContext();
 
+
+//creating the cart context function
 export function CartProvider({ children }) {
     const [cart, setCart] = useState([]);
     const [items, setItems] = useState([]);
     const [total, setTotal] = useState(0);
+    // setting the localcart to the items stored in localstorage if they exist otherwise set them initially to []
     const [localCart, setLocalCart] = useState(
         localStorage.getItem("items") ? JSON.parse(localStorage.getItem("items")) : []
     );

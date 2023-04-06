@@ -2,6 +2,8 @@ import axios from 'axios'
 import React , {useEffect , useState} from 'react'
 import { useParams , Link } from 'react-router-dom'
 
+
+// function to  send a request (with the provided id & token in the url params) to backend api to verfiy this user's email
 function VerifyEmail() {
 
    const [valid , setValid] = useState(false)
