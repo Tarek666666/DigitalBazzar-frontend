@@ -2,7 +2,7 @@ import React , {useState , useEffect} from 'react'
 import '../css/accountPage.css';
 import { Link , useNavigate } from 'react-router-dom';
 
-
+// Register page
 function Signup() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');

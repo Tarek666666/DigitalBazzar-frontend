@@ -36,7 +36,6 @@ function AdminDashBoard() {
                 }else{
                    //case role is not admin or no user ==> redirect to signin page
                   window.location.href = '/signin'
-                  console.log('not Auth')
                 }
         })
         .catch((err) => {

@@ -1,26 +1,25 @@
 import React from "react";
 import ProductCard from "../components/ProductCard";
 import { useState, useEffect, useContext } from "react";
-import CartContext from "../context/CartContext";
 import ThemeContext from "../context/ThemeContext";
 import ProductsContext from "../context/ProductsContext";
 
 function Products() {
-    const [products, dispatch] = useContext(ProductsContext);
-    const [theme, isDarkMode, setTheme] = useContext(ThemeContext);
-    const [items, total, setItems] = useContext(CartContext);
+    const [products] = useContext(ProductsContext);
+    const [theme, isDarkMode] = useContext(ThemeContext);
     const [filtersQueries, setFiltersQueries] = useState("");
     const [prods, setProds] = useState(products.products ? products.products : []);
     const [filterdProds, setFilterdProds] = useState([]);
     const [sortedProducts, setSortedProducts] = useState("-----");
     //---- pagination controllers
     const [currentPage, setCurrentPage] = useState(1);
-    const [productsPerPage, setProductsPerPage] = useState(6);
+    const [productsPerPage] = useState(6);
     const totalPages = Math.ceil(prods.length / productsPerPage);
     const indexOfLastProduct = currentPage * productsPerPage;
     const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
     const currentProducts = prods.slice(indexOfFirstProduct, indexOfLastProduct);
     const [activePage, setActivePage] = useState(currentPage);
+
     const handlePageChange = (pageNumber) => {
         setCurrentPage(pageNumber);
         setActivePage(pageNumber);
@@ -40,7 +39,6 @@ function Products() {
     const handlePrevClick = () => {
         if (activePage > 1) {
             setActivePage(activePage - 1);
-
             setCurrentPage(activePage - 1);
         }
     };

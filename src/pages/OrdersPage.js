@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import "../css/ordersPage.css";
 
 function OrdersPage() {
@@ -8,6 +7,7 @@ function OrdersPage() {
     const [error, setError] = useState(false);
     const [errorMessage, setErrorMessage] = useState();
 
+  // Define an asynchronous function to fetch orders from the API
     async function fetchOrders() {
         setLoading(true);
 
@@ -23,12 +23,13 @@ function OrdersPage() {
                 return res.json();
             })
             .then((data) => {
+                // If the response contains ordersInDb, update the state variables
                 if (data.ordersInDb) {
                     setLoading(false);
                     setError(false);
                     setOrders(data.ordersInDb);
                 } else {
-                   
+                   // If the response does not contain ordersInDb, redirect the user to the homepage
                     window.location.href = 'https://digital-bazzar.netlify.app/'
                 }
             })

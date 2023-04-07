@@ -10,9 +10,7 @@ import "../css/AppDark.css";
 function CartPage({ loggedUser }) {
     const [theme, isDarkMode] = useContext(ThemeContext);
     const [alertMessage, setAlertMessage] = useState("");
-    const [items, localCart, total, addToCart, deleteFromCart, decreaseFromCart, increaseFromCart] =
-        useContext(CartContext);
-
+    const [items, localCart, total, addToCart, deleteFromCart, decreaseFromCart, increaseFromCart] = useContext(CartContext);
     const formattedPrice = new Intl.NumberFormat("en-US", {
         style: "currency",
         currency: "USD",
@@ -22,11 +20,9 @@ function CartPage({ loggedUser }) {
         currency: "USD",
     }).format(localCart.reduce((acc, item) => acc + item.itemInDb.price * item.qty, 0));
 
-
-
     async function handleCheckout() {
-        console.log(items);
-        //only if shopping carts has at least one items
+        
+        // handle checkout only if shopping carts has at least one item
         if (items.length > 0) {
             fetch("https://digital-bazzar-backend.herokuapp.com/create-checkout-session", {
                 method: "POST",
@@ -37,18 +33,15 @@ function CartPage({ loggedUser }) {
                 body: JSON.stringify({ items, total, userId: loggedUser._id }),
             })
                 .then((res) => {
-
-                    console.log('here converting the ' , res , '<===== json')
                     return res.json()
                 })
                 .then((data) => {
                     // case product was succesfully added
                     if (data.url) {
-                        console.log(data);
+                       // redirect to stripe url
                         window.location.href = data.url;
-                        console.log(items, total);
                     } else {
-                        console.log(data);
+                        console.log('something went wrong',data);
                     }
                 })
                 .catch((err) => console.log(err));

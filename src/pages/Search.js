@@ -9,6 +9,7 @@ function Search() {
 
     const [prodsAfterSearch, setProdsAfterSearch] = useState(
         products.products.filter((prod) => {
+            // Filter the products based on the search keyword , if it mathces name or brand or category
             if (
                 prod.name
                     .toLowerCase()
@@ -30,6 +31,8 @@ function Search() {
             }
         })
     );
+    
+    // Update the products array based on the search keyword whenever it changes
     useEffect(() => {
         setProdsAfterSearch(
             products.products.filter((prod) => {

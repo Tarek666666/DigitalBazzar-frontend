@@ -3,7 +3,7 @@ import ProductCard from '../components/ProductCard';
 import ProductsContext from '../context/ProductsContext';
 
 function Laptops() {
-  const [products , dispatch] = useContext(ProductsContext)
+  const [products ] = useContext(ProductsContext)
   let productsLoaded = products.products ? products.products : [];
   const [prodsAfterSearch , setProdsAfterSearch] = useState(productsLoaded.filter(prod => prod.category.toLowerCase() === 'laptop'))
 

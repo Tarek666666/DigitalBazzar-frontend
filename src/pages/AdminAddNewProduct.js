@@ -26,7 +26,6 @@ function AdminAddNewProduct() {
         },
     })
         .then((res) => {
-     
             return res.json();
         })
         .then((data) => {
@@ -74,7 +73,7 @@ function AdminAddNewProduct() {
   
     const handleSubmit = (e) => {
       e.preventDefault();
-      // handle form submission here
+      //  check if the user didnt type a value in those fields ==== > show the error
       if(name === '' || image === '' || description === '' || brand === '' || category === '' ){
         setLoading(false)
         setError(true)

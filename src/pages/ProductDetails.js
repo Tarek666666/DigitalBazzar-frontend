@@ -6,6 +6,7 @@ import ThemeContext from '../context/ThemeContext';
 import axios from 'axios';
 
 function ProductDetails() {
+   // Get the product ID from the URL parameters
   let  {id}  = useParams();
   const [product ,setProduct] = useState({}) 
   const [loading , setLoading] = useState(false)
@@ -26,7 +27,7 @@ useEffect(() => {
       console.log(data.data)
       
     } catch (error) {
-      //later will setup the error handeler
+      //later will do the error handeler
       console.log('failed to fetch data')
     }
   }

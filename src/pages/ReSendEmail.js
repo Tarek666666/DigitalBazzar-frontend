@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../css/accountPage.css";
 import { Link, useNavigate } from "react-router-dom";
 
+// function to send the email verification again to users email
 function ReSendEmail() {
     const [email, setEmail] = useState("");
     const [error, setError] = useState(false);

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../css/accountPage.css";
 import { Link } from "react-router-dom";
 
+// login page , resend verification link , link to register page
 function Account({ loggedUser }) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -29,22 +30,21 @@ function Account({ loggedUser }) {
                 return res.json();
             })
             .then((data) => {
+                // save the token we get from backend api to local storage ==> redirect user to homepage
                 if (data.success) {
                     window.localStorage.setItem("token", data.token);
-                    console.log(data);
                    window.location.href = "./";
                 } else {
                     setError(true);
                     setErrorMessage(data.msg);
-                   
                 }
-
                 //handle error
             })
             .catch((err) => {
                 console.log(err);
             });
     };
+
 
     const handleLogout = (event) => {
         event.preventDefault();
@@ -62,11 +62,9 @@ function Account({ loggedUser }) {
             })
             .then((data) => {
 
-                console.log(data , 'cookies should be deleted ')
+                // delete the token from localstorage
                 localStorage.removeItem("token");
-              //  document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-              // document.cookie = "loggedIn=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-             window.location.href = "./";
+                 window.location.href = "./";
             })
             .catch((err) => {
                 console.log(err);
@@ -74,6 +72,8 @@ function Account({ loggedUser }) {
     };
 
     useEffect(() => {
+
+        // reset error and message to default after 2 seconds
         setTimeout(() => {
             setError(false);
             setErrorMessage("");

@@ -12,9 +12,9 @@ import ThemeContext from "../context/ThemeContext";
 import ProductsContext from "../context/ProductsContext";
 
 function Home() {
-    const [products, dispatch] = useContext(ProductsContext);
+    const [products] = useContext(ProductsContext);
     const [featuredProds, setFeaturedProds] = useState([]);
-    const [theme, isDarkMode, setTheme] = useContext(ThemeContext);
+    const [theme, isDarkMode] = useContext(ThemeContext);
     const laptops = products.products
         ? products.products.filter((prod) => prod.category.toLowerCase() === "laptop")
         : [];
