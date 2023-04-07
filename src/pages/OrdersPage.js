@@ -69,13 +69,13 @@ function OrdersPage() {
                         </tr>
                     )}
                 </thead>
-                {!error && !loading && orders.length > 0  && (
+                {!error && !loading && (
                     <tbody>
                         {orders.map((order, index) => (
                             <tr key={index}>
                                 <td>{index + 1}</td>
-                                <td>{order.userId}</td>
-                                <td>{order.userId}</td>
+                                <td>{order}</td>
+                                <td>{order}</td>
                                 <td>
                                     {order.order.items.map((item) => (
                                         <div key={item.productId._id}>
