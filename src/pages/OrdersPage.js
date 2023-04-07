@@ -3,7 +3,6 @@ import "../css/ordersPage.css";
 
 function OrdersPage() {
     const [orders, setOrders] = useState([]);
-    const [user, setUser] = useState([])
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
     const [errorMessage, setErrorMessage] = useState();
@@ -29,7 +28,8 @@ function OrdersPage() {
                     setLoading(false);
                     setError(false);    
                     setOrders(data.ordersInDb);
-                    setUser(data.ordersInDb.userId)
+                    console.log(data.ordersInDb)
+                 
                    
                 } else {
                    // If the response does not contain ordersInDb ( case user is not admin or not loggedin ), redirect the user to the homepage
@@ -44,9 +44,9 @@ function OrdersPage() {
     }
 
     useEffect(() => {
-        console.log(' use effect' )
+       
         fetchOrders();
-        console.log('====== >>> orders' , orders )
+        
     }, []);
 
     return (
@@ -75,8 +75,8 @@ function OrdersPage() {
                         {orders.map((order, index) => (
                             <tr key={index}>
                                 <td>{index + 1}</td>
-                                <td>{user.username}</td>
-                                <td>{user.email}</td>
+                                <td>{order.username}</td>
+                                <td>{order.email}</td>
                                 <td>
                                     {order.order.items.map((item) => (
                                         <div key={item.productId._id}>
