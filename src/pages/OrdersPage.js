@@ -69,7 +69,7 @@ function OrdersPage() {
                         </tr>
                     )}
                 </thead>
-                {!error && !loading && orders.userId  && (
+                {!error && !loading && orders[0].userId  && (
                     <tbody>
                         {orders.map((order, index) => (
                             <tr key={index}>
