@@ -46,7 +46,7 @@ function OrdersPage() {
 
     useEffect(() => {
         fetchOrders();
-        console.log('orders =======>' , orders , orders[0].userId.username)
+        console.log('====== >>> orders' , orders , orders[0].userId.username)
     }, []);
 
     return (
@@ -58,7 +58,7 @@ function OrdersPage() {
                             <th>LOADING ....</th>
                         </tr>
                     )}
-                    {!error && !loading && (
+                    {!error && !loading && orders.length > 0 && (
                         <tr>
                             <th>Order ID</th>
                             <th>User</th>
@@ -70,7 +70,7 @@ function OrdersPage() {
                         </tr>
                     )}
                 </thead>
-                {!error && !loading && orders.length > 0 (
+                {!error && !loading && (
                     <tbody>
                         {orders.map((order, index) => (
                             <tr key={index}>
