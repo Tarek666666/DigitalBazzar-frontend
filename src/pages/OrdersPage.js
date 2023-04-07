@@ -8,7 +8,7 @@ function OrdersPage() {
     const [errorMessage, setErrorMessage] = useState();
 
   // Define an asynchronous function to fetch orders from the API
-    async function fetchOrders() {
+   function fetchOrders() {
         setLoading(true);
 
         fetch("https://digital-bazzar-backend.herokuapp.com/admin/dashboard/orders", {
@@ -33,7 +33,7 @@ function OrdersPage() {
                     console.log(data.ordersInDb[0].userId , 'from order page')
                     console.log(data.ordersInDb[0].userId.username , 'from order page')
                 } else {
-                   // If the response does not contain ordersInDb, redirect the user to the homepage
+                   // If the response does not contain ordersInDb ( case user is not admin or not loggedin ), redirect the user to the homepage
                     window.location.href = 'https://digital-bazzar.netlify.app/'
                 }
             })
@@ -46,6 +46,7 @@ function OrdersPage() {
 
     useEffect(() => {
         fetchOrders();
+        console.log('orders =======>' , orders , orders[0].userId.username)
     }, []);
 
     return (
@@ -69,7 +70,7 @@ function OrdersPage() {
                         </tr>
                     )}
                 </thead>
-                {!error && !loading && (
+                {!error && !loading && orders.length > 0 (
                     <tbody>
                         {orders.map((order, index) => (
                             <tr key={index}>
