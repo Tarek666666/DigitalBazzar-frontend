@@ -8,7 +8,7 @@ function OrdersPage() {
     const [errorMessage, setErrorMessage] = useState();
 
   // Define an asynchronous function to fetch orders from the API
-   function fetchOrders() {
+  async function fetchOrders() {
         setLoading(true);
 
         fetch("https://digital-bazzar-backend.herokuapp.com/admin/dashboard/orders", {
@@ -45,6 +45,7 @@ function OrdersPage() {
     }
 
     useEffect(() => {
+        console.log(' use effect' )
         fetchOrders();
         console.log('====== >>> orders' , orders , orders[0].userId.username)
     }, []);
@@ -58,7 +59,7 @@ function OrdersPage() {
                             <th>LOADING ....</th>
                         </tr>
                     )}
-                    {!error && !loading && orders.length > 0 && (
+                    {!error && !loading   && (
                         <tr>
                             <th>Order ID</th>
                             <th>User</th>
