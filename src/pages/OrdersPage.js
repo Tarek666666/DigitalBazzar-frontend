@@ -45,7 +45,7 @@ function OrdersPage() {
         console.log(' use effect' )
         fetchOrders();
         console.log('====== >>> orders' , orders )
-    }, [orders]);
+    }, []);
 
     return (
         <div className='order-table-container'>
@@ -68,7 +68,7 @@ function OrdersPage() {
                         </tr>
                     )}
                 </thead>
-                {!error && !loading && orders.length > 0 && (
+                {!error && !loading && (
                     <tbody>
                         {orders.map((order, index) => (
                             <tr key={index}>
