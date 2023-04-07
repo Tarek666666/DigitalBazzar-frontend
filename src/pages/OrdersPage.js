@@ -3,6 +3,7 @@ import "../css/ordersPage.css";
 
 function OrdersPage() {
     const [orders, setOrders] = useState([]);
+    const [user, setUser] = useState([])
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
     const [errorMessage, setErrorMessage] = useState();
@@ -26,10 +27,10 @@ function OrdersPage() {
                 // If the response contains ordersInDb, update the state variables
                 if (data.ordersInDb) {
                     setLoading(false);
-                    setError(false);
+                    setError(false);    
                     setOrders(data.ordersInDb);
-                    console.log(data.ordersInDb[0] , 'from order page') 
-                    console.log(data.ordersInDb[0].userId , 'from order page')
+                    setUser(data.ordersInDb.userId)
+                   
                 } else {
                    // If the response does not contain ordersInDb ( case user is not admin or not loggedin ), redirect the user to the homepage
                     window.location.href = 'https://digital-bazzar.netlify.app/'
@@ -74,8 +75,8 @@ function OrdersPage() {
                         {orders.map((order, index) => (
                             <tr key={index}>
                                 <td>{index + 1}</td>
-                                <td>{order.userId.email}</td>
-                                <td>{order.userId.email}</td>
+                                <td>{user.username}</td>
+                                <td>{user.email}</td>
                                 <td>
                                     {order.order.items.map((item) => (
                                         <div key={item.productId._id}>
