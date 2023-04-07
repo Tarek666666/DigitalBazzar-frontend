@@ -28,7 +28,7 @@ function OrdersPage() {
                     setLoading(false);
                     setError(false);
                     setOrders(data.ordersInDb);
-                    console.log(data.ordersInDb[0].userId.username , 'from order page')
+                    console.log(orders , 'from order page')
                 } else {
                    // If the response does not contain ordersInDb ( case user is not admin or not loggedin ), redirect the user to the homepage
                     window.location.href = 'https://digital-bazzar.netlify.app/'
