@@ -74,17 +74,17 @@ function OrdersPage() {
                         {orders.map((order, index) => (
                             <tr key={index}>
                                 <td>{index + 1}</td>
-                                <td>{userId.username}</td>
-                                <td>{userId.email}</td>
+                                <td>{order.username}</td>
+                                <td>{order.email}</td>
                                 <td>
-                                    {order.items.map((item) => (
+                                    {order.order.items.map((item) => (
                                         <div key={item.productId._id}>
                                             {item.productId.name} ( x{item.qty}) - $
                                             {item.productId.price}
                                         </div>
                                     ))}
                                 </td>
-                                <td>${order.total.toFixed(2)}</td>
+                                <td>${order.order.total.toFixed(2)}</td>
                                 <td>{new Date(order.createdAt).toLocaleDateString()}</td>
                                 <td>{order.shipped ? "Shipped" : "Not Shipped"}</td>
                             </tr>
