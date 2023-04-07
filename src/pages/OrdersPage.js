@@ -75,7 +75,7 @@ function OrdersPage() {
                             <tr key={index}>
                                 <td>{index + 1}</td>
                                 <td>{order.username}</td>
-                                <td>{order.email}</td>
+                                <td>{order.userId.email}</td>
                                 <td>
                                     {order.order.items.map((item) => (
                                         <div key={item.productId._id}>
