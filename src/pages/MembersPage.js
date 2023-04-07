@@ -25,7 +25,6 @@ function MembersPage() {
                     setLoading(false);
                     setError(false);
                     setMembers(data.membersInDb);
-                    console.log('====== >>> orders' , members )
                 } else {
                    
                     window.location.href = 'https://digital-bazzar.netlify.app/'
@@ -42,7 +41,7 @@ function MembersPage() {
     useEffect(() => {
       
         fetchMembers();
-        console.log('====== >>> orders' , members )
+       
     }, []);
     return (
       <div className="members-table-container">
