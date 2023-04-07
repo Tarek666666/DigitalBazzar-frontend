@@ -23,11 +23,15 @@ function OrdersPage() {
                 return res.json();
             })
             .then((data) => {
+                console.log(data , 'from order page')
+                console.log(data.ordersInDb , 'from order page')
                 // If the response contains ordersInDb, update the state variables
                 if (data.ordersInDb) {
                     setLoading(false);
                     setError(false);
                     setOrders(data.ordersInDb);
+                    console.log(data.ordersInDb[0].userId , 'from order page')
+                    console.log(data.ordersInDb[0].userId.username , 'from order page')
                 } else {
                    // If the response does not contain ordersInDb, redirect the user to the homepage
                     window.location.href = 'https://digital-bazzar.netlify.app/'
