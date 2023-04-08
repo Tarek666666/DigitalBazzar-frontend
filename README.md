@@ -15,8 +15,8 @@ DigitalBazzar e-commerce offers a variety of features to make the shopping exper
 
 ## Technologies Used:
 DigitalBazzar was built using the following technologies:
-
-
+- React Context Api for state management
+- React Hooks (useState, useEffect, useContext, useNavigate, useLocation, useReducer, useParams, )
 - React Router DOM: This library enables client-side routing, allowing users to navigate between different pages of the app without a full page reload.
 - Axios: This library provides an easy-to-use API for making HTTP requests to the backend server.
 - Bootstrap: This popular CSS framework provides a responsive design system for building attractive and consistent UI elements.
