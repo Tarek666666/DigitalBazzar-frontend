@@ -6,7 +6,7 @@ DigitalBazzar is a full-stack e-commerce application built to simulate real-worl
 
 DigitalBazzar e-commerce offers a variety of features to make the shopping experience enjoyable and efficient:
 
-- Dark & Light Mode
+- Dark & Light Theme
 - Browse products by category or search for specific items using the search bar.
 - View detailed product information, including images, descriptions, and reviews.
 - Add products to the cart, adjust quantities, and remove items as needed.
