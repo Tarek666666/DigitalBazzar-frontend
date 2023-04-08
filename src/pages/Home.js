@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect, useReducer } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import HeroSection from "../components/HeroSection";
 import FeaturedCollection from "../components/FeaturedCollection";
 import { FaShippingFast } from "react-icons/fa";
