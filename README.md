@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# DigitalBazzar
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+DigitalBazzar is a full-stack e-commerce application built to simulate real-world functionality. This app has almost all the important features of a real e-commerce site. The application was built over a period of 6 weeks to test my knowledge and skills in various technologies.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+DigitalBazzar e-commerce offers a variety of features to make the shopping experience enjoyable and efficient:
 
-### `npm start`
+- Dark & Light Theme
+- Browse products by category or search for specific items using the search bar.
+- View detailed product information, including images, descriptions, and reviews.
+- Add products to the cart, adjust quantities, and remove items as needed.
+- Check out securely using Stripe payment processing.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used:
+DigitalBazzar was built using the following technologies:
+- React Context Api for state management
+- React Hooks (useState, useEffect, useContext, useNavigate, useLocation, useReducer, useParams )
+- React Router DOM: This library enables client-side routing, allowing users to navigate between different pages of the app without a full page reload.
+- Axios: This library provides an easy-to-use API for making HTTP requests to the backend server.
+- Bootstrap: This popular CSS framework provides a responsive design system for building attractive and consistent UI elements.
+- React Icons: This package offers a wide range of icons that can be easily added to the app for visual appeal and improved usability.
+- React-Fast-Marquee: This lightweight package allows for the creation of a smooth and eye-catching marquee animation to display important information.
 
-### `npm test`
+## Demo:
+Online Deployment of this project is available at:    [Digital-Bazzar](https://digital-bazzar.netlify.app/) <br>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+You can use these credentials to log in as an admin and explore the admin features. Additionally, new accounts can be created and verified.
 
-### `npm run build`
+| Email  | Password  |
+|-----------|-----------|
+| admin | 123123123 |
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To test checkout and stripe getway the following creditcard can be used to place order and fulfill a payment
+| Card Number             | End    | CVC |
+|------------------------|--------|-----|
+| 4242 4242 4242 4242     | 11-33  | 333 |
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Future Plans and Improvements for DigitalBazzar:
+- Implementing Stripe webhooks to handle the checkout and order creation process. When a payment is successfully processed, the webhook will send a request to the DigitalBazzar backend. I will create an API to handle this request, and only after receiving it, will the order be created in the database.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Adding a feature for the admin to upgrade a regular user to an admin. Additionally, I will implement CRUD operations for orders and members within the admin dashboard.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Improving the design of the featured collection on the homepage using the Three.js library.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Note:
+The app uses cookies to store authentication tokens, which are deleted when the user logs out. The token has a lifespan of 15 minutes, after which the user will need to log in again for continued access.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Screenshots:
+![Screenshot of DigitalBazzar homepage](https://github.com/Tarek666666/DigitalBazzar-backend/blob/master/screenshots/home.png)
+![Screenshot of DigitalBazzar homepage](https://github.com/Tarek666666/DigitalBazzar-backend/blob/master/screenshots/home-dark.png)
